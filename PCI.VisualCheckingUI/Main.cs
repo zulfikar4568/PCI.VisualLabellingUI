@@ -182,6 +182,7 @@ namespace PCI.VisualCheckingUI
             Pb_Picture.Image = null;
             Bt_Capture.Enabled = false;
             Tb_Message.Text = "";
+            Tb_Container.Text = "";
         }
 
         private void Bt_Camera_Click(object sender, EventArgs e)

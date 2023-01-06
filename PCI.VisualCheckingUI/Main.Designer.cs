@@ -40,12 +40,12 @@ namespace PCI.VisualCheckingUI
             this.kryptonTableLayoutPanel1 = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.kryptonTableLayoutPanel3 = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Bt_Container = new Krypton.Toolkit.KryptonTextBox();
+            this.Tb_Container = new Krypton.Toolkit.KryptonTextBox();
             this.Tb_Message = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.kryptonTableLayoutPanel2 = new Krypton.Toolkit.KryptonTableLayoutPanel();
             this.Bt_Camera = new Krypton.Toolkit.KryptonButton();
             this.Cb_VideoInput = new Krypton.Toolkit.KryptonComboBox();
-            this.Tb_Container = new Krypton.Toolkit.KryptonTextBox();
             this.Layout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Picture)).BeginInit();
             this.kryptonTableLayoutPanel1.SuspendLayout();
@@ -205,6 +205,7 @@ namespace PCI.VisualCheckingUI
             // 
             this.Pb_Picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pb_Picture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Pb_Picture.Image = global::PCI.VisualCheckingUI.Properties.Resources.capture2;
             this.Pb_Picture.Location = new System.Drawing.Point(813, 3);
             this.Pb_Picture.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
             this.Pb_Picture.Name = "Pb_Picture";
@@ -319,13 +320,15 @@ namespace PCI.VisualCheckingUI
             this.kryptonTableLayoutPanel1.ColumnCount = 1;
             this.kryptonTableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel1.Controls.Add(this.kryptonTableLayoutPanel3, 0, 0);
-            this.kryptonTableLayoutPanel1.Controls.Add(this.Tb_Message, 0, 1);
+            this.kryptonTableLayoutPanel1.Controls.Add(this.Tb_Message, 0, 2);
+            this.kryptonTableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.kryptonTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonTableLayoutPanel1.Location = new System.Drawing.Point(590, 3);
             this.kryptonTableLayoutPanel1.Name = "kryptonTableLayoutPanel1";
-            this.kryptonTableLayoutPanel1.RowCount = 2;
-            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.07216F));
-            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.92783F));
+            this.kryptonTableLayoutPanel1.RowCount = 3;
+            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.96899F));
+            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.03101F));
+            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 414F));
             this.kryptonTableLayoutPanel1.Size = new System.Drawing.Size(217, 582);
             this.kryptonTableLayoutPanel1.StateCommon.Color1 = System.Drawing.Color.White;
             this.kryptonTableLayoutPanel1.TabIndex = 9;
@@ -337,14 +340,14 @@ namespace PCI.VisualCheckingUI
             this.kryptonTableLayoutPanel3.ColumnCount = 1;
             this.kryptonTableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.kryptonTableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.kryptonTableLayoutPanel3.Controls.Add(this.Bt_Container, 0, 1);
+            this.kryptonTableLayoutPanel3.Controls.Add(this.Tb_Container, 0, 1);
             this.kryptonTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonTableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.kryptonTableLayoutPanel3.Name = "kryptonTableLayoutPanel3";
             this.kryptonTableLayoutPanel3.RowCount = 2;
             this.kryptonTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.53846F));
             this.kryptonTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.46154F));
-            this.kryptonTableLayoutPanel3.Size = new System.Drawing.Size(211, 104);
+            this.kryptonTableLayoutPanel3.Size = new System.Drawing.Size(211, 121);
             this.kryptonTableLayoutPanel3.StateCommon.Color1 = System.Drawing.Color.White;
             this.kryptonTableLayoutPanel3.TabIndex = 1;
             // 
@@ -355,35 +358,49 @@ namespace PCI.VisualCheckingUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Scan the Unit Here!";
             // 
-            // Bt_Container
+            // Tb_Container
             // 
-            this.Bt_Container.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Tb_Container.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Bt_Container.Location = new System.Drawing.Point(3, 40);
-            this.Bt_Container.Name = "Bt_Container";
-            this.Bt_Container.Size = new System.Drawing.Size(205, 37);
-            this.Bt_Container.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.Tb_Container.Location = new System.Drawing.Point(3, 59);
+            this.Tb_Container.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.Tb_Container.Name = "Tb_Container";
+            this.Tb_Container.Size = new System.Drawing.Size(205, 37);
+            this.Tb_Container.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Bt_Container.StateCommon.Border.Rounding = 15F;
-            this.Bt_Container.StateCommon.Border.Width = 1;
-            this.Bt_Container.TabIndex = 2;
-            this.Bt_Container.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Bt_Container_KeyDown);
+            this.Tb_Container.StateCommon.Border.Rounding = 15F;
+            this.Tb_Container.StateCommon.Border.Width = 1;
+            this.Tb_Container.TabIndex = 2;
+            this.Tb_Container.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Bt_Container_KeyDown);
             // 
             // Tb_Message
             // 
             this.Tb_Message.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tb_Message.Location = new System.Drawing.Point(3, 113);
+            this.Tb_Message.Location = new System.Drawing.Point(3, 170);
             this.Tb_Message.Multiline = true;
             this.Tb_Message.Name = "Tb_Message";
-            this.Tb_Message.Size = new System.Drawing.Size(211, 466);
+            this.Tb_Message.Size = new System.Drawing.Size(211, 409);
             this.Tb_Message.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(211, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Message:";
             // 
             // kryptonTableLayoutPanel2
             // 
@@ -524,22 +541,6 @@ namespace PCI.VisualCheckingUI
             this.Cb_VideoInput.TabIndex = 8;
             this.Cb_VideoInput.Text = "VideoDevice";
             // 
-            // Tb_Container
-            // 
-            this.Tb_Container.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tb_Container.Location = new System.Drawing.Point(3, 40);
-            this.Tb_Container.Name = "Tb_Container";
-            this.Tb_Container.Size = new System.Drawing.Size(205, 33);
-            this.Tb_Container.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.Tb_Container.StateCommon.Border.Rounding = 8F;
-            this.Tb_Container.StateCommon.Border.Width = 1;
-            this.Tb_Container.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tb_Container.TabIndex = 0;
-            this.Tb_Container.Text = "Container001";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -582,8 +583,8 @@ namespace PCI.VisualCheckingUI
         private Krypton.Toolkit.KryptonTableLayoutPanel kryptonTableLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private Krypton.Toolkit.KryptonTextBox Tb_Container;
-        private Krypton.Toolkit.KryptonTextBox Bt_Container;
         private System.Windows.Forms.TextBox Tb_Message;
+        private System.Windows.Forms.Label label2;
     }
 }
 
