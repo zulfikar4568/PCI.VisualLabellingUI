@@ -79,5 +79,45 @@ namespace PCI.VisualCheckingUI.Config
             }
         }
         #endregion
+
+        #region UNC PATH Folder
+        public static string Folder
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["Folder"];
+            }
+        }
+        public static string UNCPath
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["UNCPath"];
+            }
+        }
+        internal static string UNCPathUsername
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["UNCPathUsername"];
+            }
+        }
+        internal static string UNCPathPassword
+        {
+            get
+            {
+                if (ConfigurationManager.AppSettings["UNCPathPassword"] != "")
+                {
+                    Simple3Des oSimple3Des = new Simple3Des(ConfigurationManager.AppSettings["ExCorePasswordKey"]);
+                    return oSimple3Des.DecryptData(ConfigurationManager.AppSettings["UNCPathPassword"]);
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+        #endregion
+
     }
 }
