@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
+using Autofac;
 using PCI.VisualCheckingUI.Util;
 using static PCI.VisualCheckingUI.Util.CameraUtil;
 
@@ -18,9 +19,21 @@ namespace PCI.VisualCheckingUI
     public partial class Main : Krypton.Toolkit.KryptonForm
     {
         private static bool needSnapshot = false;
-        private readonly CameraUtil _camera = new CameraUtil();
+        private CameraUtil _camera;
+
+        public void DependencyInjectionInit()
+        {
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.RegisterModule(new Util.Util());
+            containerBuilder.RegisterModule(new Util.Opcenter.Opcenter());
+
+            var container = containerBuilder.Build();
+
+            _camera = container.Resolve<CameraUtil>();
+        }
         public Main()
         {
+            DependencyInjectionInit();
             InitializeComponent();
             GetListCameraUSB();
             Bt_Capture.Enabled = false;
