@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ using AForge.Video;
 using AForge.Video.DirectShow;
 using Autofac;
 using PCI.VisualCheckingUI.Config;
+using PCI.VisualCheckingUI.UseCase;
+using PCI.VisualCheckingUI.UseCase.Model;
 using PCI.VisualCheckingUI.Util;
 using static PCI.VisualCheckingUI.Util.CameraUtil;
 
@@ -22,16 +25,19 @@ namespace PCI.VisualCheckingUI
     {
         private static bool needSnapshot = false;
         private CameraUtil _camera;
+        private TransferImage _usecaseTransferImage;
 
         public void DependencyInjectionInit()
         {
             var containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterModule(new Util.Util());
             containerBuilder.RegisterModule(new Util.Opcenter.Opcenter());
+            containerBuilder.RegisterModule(new UseCase.UseCase());
 
             var container = containerBuilder.Build();
 
             _camera = container.Resolve<CameraUtil>();
+            _usecaseTransferImage = container.Resolve<TransferImage>();
         }
 
         private void ConnectDirectoryServer()
@@ -201,8 +207,11 @@ namespace PCI.VisualCheckingUI
                 }
                 g.Dispose();
             }
-            catch
-            { }
+            catch (Exception ex)
+            {
+                ex.Source = AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source;
+                EventLogUtil.LogErrorEvent(ex.Source, ex.Message);
+            }
         }
 
         private void Bt_Reset_Click(object sender, EventArgs e)
@@ -223,7 +232,11 @@ namespace PCI.VisualCheckingUI
             {
                 Bt_Capture.Enabled = true;
                 Tb_Message.Text = "PO: PO8GH123 \r\nProduct: Versana Premier";
+                /*ContainerStatusModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
+                string jsonString = JsonSerializer.Serialize(dataContainer);
+                Tb_Message.Text = jsonString;*/
             }
+
         }
     } 
 }

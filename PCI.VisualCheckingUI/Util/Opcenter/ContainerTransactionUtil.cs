@@ -324,6 +324,104 @@ namespace PCI.VisualCheckingUI.Util.Opcenter
                 if (!(oService is null)) oService.Close();
             }
         }
+        public ViewContainerStatus GetCurrentContainer(string ContainerName, bool IgnoreException = true)
+        {
+            string TxnId = Guid.NewGuid().ToString();
+            ViewContainerStatusService oService = null;
+            try
+            {
+                oService = new ViewContainerStatusService(AppSettings.ExCoreUserProfile);
 
+                //Set input Data
+                ViewContainerStatus oServiceObject = new ViewContainerStatus();
+                oServiceObject.Container = new ContainerRef(ContainerName);
+                ViewContainerStatus_Request oServiceRequest = new ViewContainerStatus_Request();
+                oServiceRequest.Info = new ViewContainerStatus_Info();
+                oServiceRequest.Info.RequestValue = true;
+                oServiceRequest.Info.ContainerName = new Info(true);
+                oServiceRequest.Info.Step = new Info(true);
+                oServiceRequest.Info.Qty = new Info(true);
+                oServiceRequest.Info.Product = new Info(true);
+                oServiceRequest.Info.Operation = new Info(true);
+                oServiceRequest.Info.Product = new Info(true);
+
+                //Request the Data
+                ViewContainerStatus_Result oServiceResult = null;
+                ResultStatus oResultStatus = oService.ExecuteTransaction(oServiceObject, oServiceRequest, out oServiceResult);
+
+                //Return Result
+                string sMessage = "";
+                EventLogUtil.LogEvent(Logging.LoggingContainer(ContainerName, TxnId, sMessage), System.Diagnostics.EventLogEntryType.Information, 3);
+                if (_helperUtil.ProcessResult(oResultStatus, ref sMessage, false))
+                {
+                    return oServiceResult.Value;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.Source = AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source;
+                string exceptionMsg = Logging.LoggingContainer(ContainerName, TxnId, ex.Message);
+                EventLogUtil.LogErrorEvent(ex.Source, exceptionMsg);
+                if (!IgnoreException) throw ex;
+                return null;
+            }
+            finally
+            {
+                if (!(oService is null)) oService.Close();
+            }
+        }
+        public CurrentContainerStatus GetContainerStatusDetails(string ContainerName, string DataCollectionName = "", string DataCollectionRev = "", bool IgnoreException = true)
+        {
+            string TxnId = Guid.NewGuid().ToString();
+            ContainerTxnService oService = null;
+            try
+            {
+                oService = new ContainerTxnService(AppSettings.ExCoreUserProfile);
+
+                //Set input Data
+                ContainerTxn oServiceObject = new ContainerTxn();
+                oServiceObject.Container = new ContainerRef(ContainerName);
+                if (DataCollectionName != "")
+                {
+                    oServiceObject.DataCollectionDef = new RevisionedObjectRef() { Name = DataCollectionName, Revision = DataCollectionRev, RevisionOfRecord = (DataCollectionRev == "") };
+                }
+                ContainerTxn_Request oServiceRequest = new ContainerTxn_Request();
+                oServiceRequest.Info = new ContainerTxn_Info();
+                oServiceRequest.Info.CurrentContainerStatus = new CurrentContainerStatus_Info();
+                oServiceRequest.Info.CurrentContainerStatus.RequestValue = true;
+
+                //Requets the Data
+                ContainerTxn_Result oServiceResult = null;
+                ResultStatus oResultStatus = oService.GetEnvironment(oServiceObject, oServiceRequest, out oServiceResult);
+
+                //Return Result
+                string sMessage = "";
+                EventLogUtil.LogEvent(Logging.LoggingContainer(ContainerName, TxnId, sMessage), System.Diagnostics.EventLogEntryType.Information, 3);
+                if (_helperUtil.ProcessResult(oResultStatus, ref sMessage, false))
+                {
+                    return oServiceResult.Value.CurrentContainerStatus;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.Source = AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source;
+                string exceptionMsg = Logging.LoggingContainer(ContainerName, TxnId, ex.Message);
+                EventLogUtil.LogErrorEvent(ex.Source, exceptionMsg);
+                if (!IgnoreException) throw ex;
+                return null;
+            }
+            finally
+            {
+                if (!(oService is null)) oService.Close();
+            }
+        }
     }
 }
