@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using Autofac;
+using PCI.VisualCheckingUI.Config;
 using PCI.VisualCheckingUI.Util;
 using static PCI.VisualCheckingUI.Util.CameraUtil;
 
@@ -31,12 +33,25 @@ namespace PCI.VisualCheckingUI
 
             _camera = container.Resolve<CameraUtil>();
         }
+
+        private void ConnectDirectoryServer()
+        {
+            try
+            {
+                FolderNetworkConnection.Connect();
+            }
+            catch (Exception ex)
+            {
+                EventLogUtil.LogErrorEvent(AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source, ex);
+            }
+        }
         public Main()
         {
             DependencyInjectionInit();
             InitializeComponent();
             GetListCameraUSB();
             Bt_Capture.Enabled = false;
+            ConnectDirectoryServer();
         }
         private void ExitCamera()
         {
@@ -78,7 +93,7 @@ namespace PCI.VisualCheckingUI
                 }
                 else
                 {
-                    MessageBox.Show("Camera devices found");
+                    MessageBox.Show("Camera devices not found");
                 }
 
                 _camera.videoDevice = new VideoCaptureDevice(_camera.videoDevices[Convert.ToInt32(_camera.Usbcamera)].MonikerString);

@@ -13,7 +13,7 @@ namespace PCI.VisualCheckingUI.Config
 
         public static void Connect()
         {
-            if (AppSettings.Folder != "")
+            if (AppSettings.Folder != "" && AppSettings.UNCPathUsername != "" && AppSettings.UNCPathPassword != "")
             {
                 NetUtil.Connect(AppSettings.UNCPath, AppSettings.UNCPathUsername, AppSettings.UNCPathPassword);
                 if (!Directory.Exists(AppSettings.Folder)) Directory.CreateDirectory(AppSettings.Folder);
