@@ -3,15 +3,14 @@ using Camstar.WCF.Services;
 using PCI.VisualCheckingUI.Config;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCI.VisualCheckingUI.Util.Opcenter
+namespace PCI.VisualCheckingUI.Driver.Opcenter
 {
-    public class HelperUtil
+    public class Helper
     {
         public string LastResultMessage = "";
         public bool ProcessResult(ResultStatus Result, ref string ResultMessage, bool IgnoreException = true)
@@ -206,24 +205,6 @@ namespace PCI.VisualCheckingUI.Util.Opcenter
                 }
             }
             return oDataPointSummary;
-        }
-        public bool IsDate(string input)
-        {
-            if (!string.IsNullOrEmpty(input))
-            {
-                DateTime dt;
-                return (DateTime.TryParse(input, out dt));
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public bool CanCovertTo(string testString, string testType)
-        {
-            Type type = Type.GetType(testType, null, null);
-            TypeConverter converter = TypeDescriptor.GetConverter(type);
-            return converter.IsValid(testString);
         }
     }
 }

@@ -31,7 +31,8 @@ namespace PCI.VisualCheckingUI
         {
             var containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterModule(new Util.Util());
-            containerBuilder.RegisterModule(new Util.Opcenter.Opcenter());
+            containerBuilder.RegisterModule(new Driver.Driver());
+            containerBuilder.RegisterModule(new Repository.Repository());
             containerBuilder.RegisterModule(new UseCase.UseCase());
 
             var container = containerBuilder.Build();
@@ -44,7 +45,7 @@ namespace PCI.VisualCheckingUI
         {
             try
             {
-                FolderNetworkConnection.Connect();
+                NetworkUNC.Connect();
             }
             catch (Exception ex)
             {

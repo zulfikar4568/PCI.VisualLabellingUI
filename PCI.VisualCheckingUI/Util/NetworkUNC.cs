@@ -1,4 +1,4 @@
-﻿using PCI.VisualCheckingUI.Util;
+﻿using PCI.VisualCheckingUI.Config;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCI.VisualCheckingUI.Config
+namespace PCI.VisualCheckingUI.Util
 {
-    public class FolderNetworkConnection
+    public class NetworkUNC
     {
 
         public static void Connect()

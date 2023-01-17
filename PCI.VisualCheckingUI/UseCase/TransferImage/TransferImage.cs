@@ -1,6 +1,5 @@
 ﻿using Camstar.WCF.ObjectStack;
 using PCI.VisualCheckingUI.UseCase.Model;
-using PCI.VisualCheckingUI.Util.Opcenter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +10,8 @@ namespace PCI.VisualCheckingUI.UseCase
 {
     public class TransferImage
     {
-        private ContainerTransactionUtil _containerTxn;
-        public TransferImage(ContainerTransactionUtil containerTxn)
+        private Repository.Opcenter.ContainerTransaction _containerTxn;
+        public TransferImage(Repository.Opcenter.ContainerTransaction containerTxn)
         {
             _containerTxn = containerTxn;
         }
