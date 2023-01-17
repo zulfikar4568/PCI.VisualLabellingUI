@@ -84,13 +84,13 @@ namespace PCI.VisualCheckingUI
             this.Layout.Controls.Add(this.kryptonTableLayoutPanel2, 0, 1);
             this.Layout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Layout.Location = new System.Drawing.Point(0, 0);
-            this.Layout.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
+            this.Layout.Margin = new System.Windows.Forms.Padding(12, 2, 12, 2);
             this.Layout.Name = "Layout";
             this.Layout.RowCount = 2;
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.05421F));
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.94578F));
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Layout.Size = new System.Drawing.Size(1398, 664);
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.92091F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.0791F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.Layout.Size = new System.Drawing.Size(1118, 531);
             this.Layout.StateCommon.Color1 = System.Drawing.Color.White;
             this.Layout.StateCommon.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Control;
             this.Layout.TabIndex = 0;
@@ -100,8 +100,8 @@ namespace PCI.VisualCheckingUI
             this.Bt_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Bt_Reset.CornerRoundingRadius = 8F;
             this.Bt_Reset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Bt_Reset.Location = new System.Drawing.Point(592, 561);
-            this.Bt_Reset.Margin = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.Bt_Reset.Location = new System.Drawing.Point(473, 465);
+            this.Bt_Reset.Margin = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.Bt_Reset.Name = "Bt_Reset";
             this.Bt_Reset.OverrideDefault.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.OverrideDefault.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
@@ -132,7 +132,7 @@ namespace PCI.VisualCheckingUI
             this.Bt_Reset.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Reset.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bt_Reset.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Bt_Reset.Size = new System.Drawing.Size(213, 45);
+            this.Bt_Reset.Size = new System.Drawing.Size(170, 36);
             this.Bt_Reset.StateCommon.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StateCommon.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StateCommon.Back.ColorAngle = 45F;
@@ -192,10 +192,10 @@ namespace PCI.VisualCheckingUI
             // Vsc_Source
             // 
             this.Vsc_Source.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Vsc_Source.Location = new System.Drawing.Point(20, 3);
-            this.Vsc_Source.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.Vsc_Source.Location = new System.Drawing.Point(16, 2);
+            this.Vsc_Source.Margin = new System.Windows.Forms.Padding(16, 2, 2, 2);
             this.Vsc_Source.Name = "Vsc_Source";
-            this.Vsc_Source.Size = new System.Drawing.Size(564, 498);
+            this.Vsc_Source.Size = new System.Drawing.Size(451, 431);
             this.Vsc_Source.TabIndex = 0;
             this.Vsc_Source.Text = "videoSourcePlayer1";
             this.Vsc_Source.VideoSource = null;
@@ -206,10 +206,10 @@ namespace PCI.VisualCheckingUI
             this.Pb_Picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pb_Picture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Pb_Picture.Image = global::PCI.VisualCheckingUI.Properties.Resources.capture2;
-            this.Pb_Picture.Location = new System.Drawing.Point(813, 3);
-            this.Pb_Picture.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.Pb_Picture.Location = new System.Drawing.Point(649, 2);
+            this.Pb_Picture.Margin = new System.Windows.Forms.Padding(2, 2, 16, 2);
             this.Pb_Picture.Name = "Pb_Picture";
-            this.Pb_Picture.Size = new System.Drawing.Size(565, 498);
+            this.Pb_Picture.Size = new System.Drawing.Size(453, 431);
             this.Pb_Picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Pb_Picture.TabIndex = 1;
             this.Pb_Picture.TabStop = false;
@@ -220,8 +220,8 @@ namespace PCI.VisualCheckingUI
             this.Bt_Capture.CornerRoundingRadius = 8F;
             this.Bt_Capture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Bt_Capture.Enabled = false;
-            this.Bt_Capture.Location = new System.Drawing.Point(870, 561);
-            this.Bt_Capture.Margin = new System.Windows.Forms.Padding(60, 10, 80, 10);
+            this.Bt_Capture.Location = new System.Drawing.Point(695, 465);
+            this.Bt_Capture.Margin = new System.Windows.Forms.Padding(48, 8, 64, 8);
             this.Bt_Capture.Name = "Bt_Capture";
             this.Bt_Capture.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.OverrideDefault.Back.Color2 = System.Drawing.Color.DarkCyan;
@@ -252,7 +252,7 @@ namespace PCI.VisualCheckingUI
             this.Bt_Capture.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Capture.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bt_Capture.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Bt_Capture.Size = new System.Drawing.Size(448, 45);
+            this.Bt_Capture.Size = new System.Drawing.Size(359, 36);
             this.Bt_Capture.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StateCommon.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StateCommon.Back.ColorAngle = 45F;
@@ -323,13 +323,14 @@ namespace PCI.VisualCheckingUI
             this.kryptonTableLayoutPanel1.Controls.Add(this.Tb_Message, 0, 2);
             this.kryptonTableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.kryptonTableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonTableLayoutPanel1.Location = new System.Drawing.Point(590, 3);
+            this.kryptonTableLayoutPanel1.Location = new System.Drawing.Point(471, 2);
+            this.kryptonTableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTableLayoutPanel1.Name = "kryptonTableLayoutPanel1";
             this.kryptonTableLayoutPanel1.RowCount = 3;
             this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.96899F));
             this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.03101F));
-            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 355F));
-            this.kryptonTableLayoutPanel1.Size = new System.Drawing.Size(217, 498);
+            this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 284F));
+            this.kryptonTableLayoutPanel1.Size = new System.Drawing.Size(174, 431);
             this.kryptonTableLayoutPanel1.StateCommon.Color1 = System.Drawing.Color.White;
             this.kryptonTableLayoutPanel1.TabIndex = 9;
             // 
@@ -342,12 +343,13 @@ namespace PCI.VisualCheckingUI
             this.kryptonTableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.kryptonTableLayoutPanel3.Controls.Add(this.Tb_Container, 0, 1);
             this.kryptonTableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonTableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.kryptonTableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
+            this.kryptonTableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTableLayoutPanel3.Name = "kryptonTableLayoutPanel3";
             this.kryptonTableLayoutPanel3.RowCount = 2;
             this.kryptonTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.53846F));
             this.kryptonTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.46154F));
-            this.kryptonTableLayoutPanel3.Size = new System.Drawing.Size(211, 102);
+            this.kryptonTableLayoutPanel3.Size = new System.Drawing.Size(170, 107);
             this.kryptonTableLayoutPanel3.StateCommon.Color1 = System.Drawing.Color.White;
             this.kryptonTableLayoutPanel3.TabIndex = 1;
             // 
@@ -358,9 +360,10 @@ namespace PCI.VisualCheckingUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Location = new System.Drawing.Point(2, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 18);
+            this.label1.Size = new System.Drawing.Size(166, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Scan the Unit Here!";
             // 
@@ -368,10 +371,10 @@ namespace PCI.VisualCheckingUI
             // 
             this.Tb_Container.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tb_Container.Location = new System.Drawing.Point(3, 52);
-            this.Tb_Container.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.Tb_Container.Location = new System.Drawing.Point(2, 51);
+            this.Tb_Container.Margin = new System.Windows.Forms.Padding(2, 12, 2, 2);
             this.Tb_Container.Name = "Tb_Container";
-            this.Tb_Container.Size = new System.Drawing.Size(205, 37);
+            this.Tb_Container.Size = new System.Drawing.Size(166, 33);
             this.Tb_Container.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -383,10 +386,11 @@ namespace PCI.VisualCheckingUI
             // Tb_Message
             // 
             this.Tb_Message.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tb_Message.Location = new System.Drawing.Point(3, 145);
+            this.Tb_Message.Location = new System.Drawing.Point(2, 148);
+            this.Tb_Message.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Tb_Message.Multiline = true;
             this.Tb_Message.Name = "Tb_Message";
-            this.Tb_Message.Size = new System.Drawing.Size(211, 350);
+            this.Tb_Message.Size = new System.Drawing.Size(170, 281);
             this.Tb_Message.TabIndex = 4;
             // 
             // label2
@@ -396,9 +400,10 @@ namespace PCI.VisualCheckingUI
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 124);
+            this.label2.Location = new System.Drawing.Point(2, 131);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 18);
+            this.label2.Size = new System.Drawing.Size(170, 15);
             this.label2.TabIndex = 6;
             this.label2.Text = "Message:";
             // 
@@ -412,11 +417,12 @@ namespace PCI.VisualCheckingUI
             this.kryptonTableLayoutPanel2.Controls.Add(this.Bt_Camera, 1, 0);
             this.kryptonTableLayoutPanel2.Controls.Add(this.Cb_VideoInput, 0, 0);
             this.kryptonTableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonTableLayoutPanel2.Location = new System.Drawing.Point(3, 507);
+            this.kryptonTableLayoutPanel2.Location = new System.Drawing.Point(2, 437);
+            this.kryptonTableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonTableLayoutPanel2.Name = "kryptonTableLayoutPanel2";
             this.kryptonTableLayoutPanel2.RowCount = 1;
             this.kryptonTableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.kryptonTableLayoutPanel2.Size = new System.Drawing.Size(581, 154);
+            this.kryptonTableLayoutPanel2.Size = new System.Drawing.Size(465, 92);
             this.kryptonTableLayoutPanel2.StateCommon.Color1 = System.Drawing.Color.White;
             this.kryptonTableLayoutPanel2.TabIndex = 14;
             // 
@@ -425,8 +431,8 @@ namespace PCI.VisualCheckingUI
             this.Bt_Camera.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Bt_Camera.CornerRoundingRadius = 8F;
             this.Bt_Camera.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Bt_Camera.Location = new System.Drawing.Point(250, 54);
-            this.Bt_Camera.Margin = new System.Windows.Forms.Padding(60, 10, 60, 10);
+            this.Bt_Camera.Location = new System.Drawing.Point(200, 28);
+            this.Bt_Camera.Margin = new System.Windows.Forms.Padding(48, 8, 48, 8);
             this.Bt_Camera.Name = "Bt_Camera";
             this.Bt_Camera.OverrideDefault.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.OverrideDefault.Back.Color2 = System.Drawing.Color.MediumOrchid;
@@ -457,7 +463,7 @@ namespace PCI.VisualCheckingUI
             this.Bt_Camera.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Camera.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bt_Camera.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Bt_Camera.Size = new System.Drawing.Size(271, 45);
+            this.Bt_Camera.Size = new System.Drawing.Size(217, 36);
             this.Bt_Camera.StateCommon.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StateCommon.Back.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StateCommon.Back.ColorAngle = 45F;
@@ -520,11 +526,11 @@ namespace PCI.VisualCheckingUI
             this.Cb_VideoInput.CornerRoundingRadius = 20F;
             this.Cb_VideoInput.DropDownWidth = 200;
             this.Cb_VideoInput.IntegralHeight = false;
-            this.Cb_VideoInput.Location = new System.Drawing.Point(10, 61);
-            this.Cb_VideoInput.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.Cb_VideoInput.Location = new System.Drawing.Point(8, 31);
+            this.Cb_VideoInput.Margin = new System.Windows.Forms.Padding(8, 2, 8, 2);
             this.Cb_VideoInput.Name = "Cb_VideoInput";
             this.Cb_VideoInput.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.Cb_VideoInput.Size = new System.Drawing.Size(170, 32);
+            this.Cb_VideoInput.Size = new System.Drawing.Size(136, 30);
             this.Cb_VideoInput.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
@@ -543,13 +549,14 @@ namespace PCI.VisualCheckingUI
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1398, 664);
+            this.ClientSize = new System.Drawing.Size(1118, 531);
             this.Controls.Add(this.Layout);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MinimizeBox = false;
             this.Name = "Main";
             this.Palette = this.UIPalette;

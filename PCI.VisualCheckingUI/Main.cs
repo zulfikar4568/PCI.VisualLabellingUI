@@ -24,41 +24,26 @@ namespace PCI.VisualCheckingUI
     public partial class Main : Krypton.Toolkit.KryptonForm
     {
         private static bool needSnapshot = false;
-        private CameraUtil _camera;
-        private TransferImage _usecaseTransferImage;
+        private readonly CameraUtil _camera;
+        private readonly TransferImage _usecaseTransferImage;
 
-        public void DependencyInjectionInit()
-        {
-            var containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterModule(new Util.Util());
-            containerBuilder.RegisterModule(new Driver.Driver());
-            containerBuilder.RegisterModule(new Repository.Repository());
-            containerBuilder.RegisterModule(new UseCase.UseCase());
-
-            var container = containerBuilder.Build();
-
-            _camera = container.Resolve<CameraUtil>();
-            _usecaseTransferImage = container.Resolve<TransferImage>();
-        }
-
-        private void ConnectDirectoryServer()
-        {
-            try
-            {
-                NetworkUNC.Connect();
-            }
-            catch (Exception ex)
-            {
-                EventLogUtil.LogErrorEvent(AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source, ex);
-            }
-        }
         public Main()
         {
-            DependencyInjectionInit();
+            // Component Initialization Default
             InitializeComponent();
+
+            // Connect to Network
+            Bootstrapper.ConnectDirectoryServer();
+
+            // Dependency injection
+            var containerBuilder = Bootstrapper.DependencyInjectionBuilder(new ContainerBuilder());
+            var container = containerBuilder.Build();
+            _camera = container.Resolve<CameraUtil>();
+            _usecaseTransferImage = container.Resolve<TransferImage>();
+
+            // Initialize Camera
             GetListCameraUSB();
             Bt_Capture.Enabled = false;
-            ConnectDirectoryServer();
         }
         private void ExitCamera()
         {
@@ -154,7 +139,11 @@ namespace PCI.VisualCheckingUI
                     Pb_Picture.Image.Save(pathFolder + nameCapture, ImageFormat.Bmp);
                 }*/
             }
-            catch { }
+            catch (Exception ex) 
+            {
+                ex.Source = AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source;
+                EventLogUtil.LogErrorEvent(ex.Source, ex);
+            }
         }
 
         public void CloseCurrentVideoSource()

@@ -130,6 +130,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Config\AppSettings.cs" />
     <Compile Include="Driver\Driver.cs" />
     <Compile Include="Driver\Opcenter\ContainerTransaction.cs" />
