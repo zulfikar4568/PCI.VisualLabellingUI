@@ -137,8 +137,9 @@ namespace PCI.VisualCheckingUI.Driver.Opcenter
 
                 //Return Result
                 string sMessage = "";
+                bool processResult = _helper.ProcessResult(oResultStatus, ref sMessage, false);
                 EventLogUtil.LogEvent(Logging.LoggingContainer(ContainerName, TxnId, sMessage), System.Diagnostics.EventLogEntryType.Information, 3);
-                if (_helper.ProcessResult(oResultStatus, ref sMessage, false))
+                if (processResult)
                 {
                     return oServiceResult.Value;
                 }
@@ -180,8 +181,9 @@ namespace PCI.VisualCheckingUI.Driver.Opcenter
 
                 //Return Result
                 string sMessage = "";
+                bool processResult = _helper.ProcessResult(oResultStatus, ref sMessage, false);
                 EventLogUtil.LogEvent(Logging.LoggingContainer(ContainerName, TxnId, sMessage), System.Diagnostics.EventLogEntryType.Information, 3);
-                if (_helper.ProcessResult(oResultStatus, ref sMessage, false))
+                if (processResult)
                 {
                     return oServiceResult.Value.CurrentContainerStatus;
                 }
