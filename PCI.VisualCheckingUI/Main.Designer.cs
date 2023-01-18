@@ -358,6 +358,7 @@ namespace PCI.VisualCheckingUI
             // 
             // Tb_Message
             // 
+            this.Tb_Message.Cursor = System.Windows.Forms.Cursors.Default;
             this.Tb_Message.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tb_Message.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tb_Message.ForeColor = System.Drawing.Color.DimGray;

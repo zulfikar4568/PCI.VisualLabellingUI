@@ -36,6 +36,9 @@ namespace PCI.VisualCheckingUI
 
             Bt_TurnOffCamera.Enabled = false;
             Bt_Camera.Enabled = true;
+            Cb_VideoInput.DropDownStyle = ComboBoxStyle.DropDownList;
+            Tb_Message.ReadOnly = true;
+            Tb_Message.BackColor= Color.White;
         }
         private void ExitCamera()
         {
