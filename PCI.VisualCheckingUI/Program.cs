@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using PCI.VisualCheckingUI.Config;
 using PCI.VisualCheckingUI.UseCase;
 using PCI.VisualCheckingUI.Util;
 using System;
@@ -24,6 +25,7 @@ namespace PCI.VisualCheckingUI
             var containerBuilder = Bootstrapper.DependencyInjectionBuilder(new ContainerBuilder());
             var container = containerBuilder.Build();
 
+            AppSettings.AssemblyName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(container.Resolve<Main>());

@@ -119,5 +119,21 @@ namespace PCI.VisualCheckingUI.Config
         }
         #endregion
 
+        #region DOCUMENT CONFIG
+        public static string DocumentRevision
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["DocumentRevision"];
+            }
+        }
+        public static string DocumentDescription
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["DocumentDescription"];
+            }
+        }
+        #endregion
     }
 }

@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Text.Json;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
-using Autofac;
 using PCI.VisualCheckingUI.Config;
 using PCI.VisualCheckingUI.UseCase;
 using PCI.VisualCheckingUI.UseCase.Model;
@@ -37,7 +29,9 @@ namespace PCI.VisualCheckingUI
 
             // Initialize Camera
             GetListCameraUSB();
-            Bt_Capture.Enabled = false;
+
+            //Reset the State
+            ResetState();
         }
         private void ExitCamera()
         {
@@ -86,7 +80,7 @@ namespace PCI.VisualCheckingUI
                 _camera.snapshotCapabilities = _camera.videoDevice.SnapshotCapabilities;
                 if (_camera.snapshotCapabilities.Length == 0)
                 {
-                    MessageBox.Show("Camera Capture Not supported");
+                    // MessageBox.Show("Camera Capture Not supported");
                 }
                 OpenVideoSource(_camera.videoDevice);
             }
@@ -121,17 +115,16 @@ namespace PCI.VisualCheckingUI
                 Pb_Picture.Image = image;
                 Pb_Picture.Update();
 
-                string namaImage = "sampleImage";
-                string nameCapture = namaImage + "_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".bmp";
-                /*if (Directory.Exists(pathFolder))
+                bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"PICTURE_VL_{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
+                if (status)
                 {
-                    Pb_Picture.Image.Save(pathFolder + nameCapture, ImageFormat.Bmp);
+                    MessageBox.Show("Success Transfer Image");
+                    ResetState();
+                } else
+                {
+                    MessageBox.Show("Failed Transfer Image");
+                    ResetState();
                 }
-                else
-                {
-                    Directory.CreateDirectory(pathFolder);
-                    Pb_Picture.Image.Save(pathFolder + nameCapture, ImageFormat.Bmp);
-                }*/
             }
             catch (Exception ex) 
             {
@@ -182,8 +175,15 @@ namespace PCI.VisualCheckingUI
                 DateTime now = DateTime.Now;
                 Graphics g = Graphics.FromImage(image);
                 // paint current time
-                SolidBrush brush = new SolidBrush(Color.Red);
-                g.DrawString(now.ToString(), this.Font, brush, new PointF(5, 5));
+                SolidBrush brush = new SolidBrush(Color.White);
+                FontFamily fontFamily = new FontFamily("Arial");
+                Font font = new Font(
+                   fontFamily,
+                   25,
+                   FontStyle.Regular,
+                   GraphicsUnit.Pixel);
+
+                g.DrawString(now.ToString(), font, brush, new PointF(5, 5));
                 brush.Dispose();
                 if (needSnapshot)
                 {
@@ -200,10 +200,19 @@ namespace PCI.VisualCheckingUI
 
         private void Bt_Reset_Click(object sender, EventArgs e)
         {
+            ResetState();
+        }
+
+        private void ResetState()
+        {
             Pb_Picture.Image = null;
             Bt_Capture.Enabled = false;
+            Tb_Container.Enabled = true;
             Tb_Message.Text = "";
             Tb_Container.Text = "";
+            Lb_Instruction.Text = "Please scan the Unit Serial Number!";
+            Lb_Instruction.ForeColor = Color.White;
+            Lb_Instruction.BackColor = Color.Green;
         }
 
         private void Bt_Camera_Click(object sender, EventArgs e)
@@ -214,11 +223,24 @@ namespace PCI.VisualCheckingUI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Bt_Capture.Enabled = true;
-                Tb_Message.Text = "PO: PO8GH123 \r\nProduct: Versana Premier";
-                /*ContainerStatusModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
-                string jsonString = JsonSerializer.Serialize(dataContainer);
-                Tb_Message.Text = jsonString;*/
+                ContainerStatusModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
+                if (dataContainer is null)
+                {
+                    MessageBox.Show("Container doesn't exists!");
+                } else
+                {
+                    Bt_Capture.Enabled = true;
+                    Tb_Container.Enabled = false;
+                    Lb_Instruction.Text = "Put the camera in correct position then please click capture button to catch the image!";
+                    Lb_Instruction.ForeColor = Color.White;
+                    Lb_Instruction.BackColor = Color.YellowGreen;
+
+                    Tb_Message.Text += $"Product: {dataContainer.Product}\r\n";
+                    Tb_Message.Text += $"Product Description: {dataContainer.ProductDescription}\r\n";
+                    Tb_Message.Text += $"Unit: {dataContainer.Unit}\r\n";
+                    Tb_Message.Text += $"Qty: {dataContainer.Qty}\r\n";
+                    Tb_Message.Text += $"Operation: {dataContainer.Operation}\r\n";
+                }
             }
 
         }
