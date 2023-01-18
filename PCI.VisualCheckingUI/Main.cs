@@ -51,7 +51,7 @@ namespace PCI.VisualCheckingUI
             }
             else
             {
-                Cb_VideoInput.Items.Add("No Direct Show devices found");
+                Cb_VideoInput.Items.Add(MessageDefinition.NoDeviceFound);
             }
 
             Cb_VideoInput.SelectedIndex = 0;
@@ -73,7 +73,7 @@ namespace PCI.VisualCheckingUI
                 }
                 else
                 {
-                    MessageBox.Show("Camera devices not found");
+                    MessageBox.Show(MessageDefinition.NoDeviceFound);
                 }
 
                 _camera.videoDevice = new VideoCaptureDevice(_camera.videoDevices[Convert.ToInt32(_camera.Usbcamera)].MonikerString);
@@ -115,14 +115,14 @@ namespace PCI.VisualCheckingUI
                 Pb_Picture.Image = image;
                 Pb_Picture.Update();
 
-                bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"PICTURE_VL_{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
+                bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
                 if (status)
                 {
-                    MessageBox.Show("Success Transfer Image");
+                    MessageBox.Show(MessageDefinition.SendImageSuccess);
                     ResetState();
                 } else
                 {
-                    MessageBox.Show("Failed Transfer Image");
+                    MessageBox.Show(MessageDefinition.SendImageFailed);
                     ResetState();
                 }
             }
@@ -165,7 +165,16 @@ namespace PCI.VisualCheckingUI
 
         private void Bt_Capture_Click(object sender, EventArgs e)
         {
-            needSnapshot = true;
+            if (Vsc_Source.VideoSource == null)
+            {
+                MessageBox.Show(MessageDefinition.CameraNotConnected);
+            } else
+            {
+                Lb_Instruction.Text = MessageDefinition.Waiting;
+                Lb_Instruction.ForeColor = Color.White;
+                Lb_Instruction.BackColor = Color.Blue;
+                needSnapshot = true;
+            }
         }
 
         private void Vsc_Source_NewFrame(object sender, ref Bitmap image)
@@ -210,7 +219,7 @@ namespace PCI.VisualCheckingUI
             Tb_Container.Enabled = true;
             Tb_Message.Text = "";
             Tb_Container.Text = "";
-            Lb_Instruction.Text = "Please scan the Unit Serial Number!";
+            Lb_Instruction.Text = MessageDefinition.MessageBeforeScan;
             Lb_Instruction.ForeColor = Color.White;
             Lb_Instruction.BackColor = Color.Green;
         }
@@ -226,12 +235,12 @@ namespace PCI.VisualCheckingUI
                 ContainerStatusModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
                 if (dataContainer is null)
                 {
-                    MessageBox.Show("Container doesn't exists!");
+                    MessageBox.Show(MessageDefinition.ProductNotFound);
                 } else
                 {
                     Bt_Capture.Enabled = true;
                     Tb_Container.Enabled = false;
-                    Lb_Instruction.Text = "Put the camera in correct position then please click capture button to catch the image!";
+                    Lb_Instruction.Text = MessageDefinition.MessageAfterScan;
                     Lb_Instruction.ForeColor = Color.White;
                     Lb_Instruction.BackColor = Color.YellowGreen;
 

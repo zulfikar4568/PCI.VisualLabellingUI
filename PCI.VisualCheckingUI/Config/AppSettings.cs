@@ -134,6 +134,21 @@ namespace PCI.VisualCheckingUI.Config
                 return ConfigurationManager.AppSettings["DocumentDescription"];
             }
         }
+        public static string PrefixDocumentName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["PrefixDocumentName"];
+            }
+        }
+        public static bool ReuseDocument
+        {
+            get
+            {
+                return Convert.ToBoolean(ConfigurationManager.AppSettings["ReuseDocument"]);
+            }
+        }
+        
         #endregion
     }
 }

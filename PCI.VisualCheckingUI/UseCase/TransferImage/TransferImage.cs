@@ -25,11 +25,11 @@ namespace PCI.VisualCheckingUI.UseCase
             if (containerStatus == null) return null;
             return new ContainerStatusModel
             {
-                Product = containerStatus.Product is null ? "Not defined" : containerStatus.Product.ToString(),
-                ProductDescription = containerStatus.ProductDescription is null ? "Not defined" : containerStatus.ProductDescription.ToString(),
-                Operation = containerStatus.Operation is null ? "Not defined" : containerStatus.Operation.ToString(),
-                Qty = containerStatus.Qty is null ? "Not defined" : containerStatus.Qty.ToString(),
-                Unit = containerStatus.UOM is null ? "Not defined" : containerStatus.UOM.ToString()
+                Product = containerStatus.Product is null ? MessageDefinition.ObjectNotDefined : containerStatus.Product.ToString(),
+                ProductDescription = containerStatus.ProductDescription is null ? MessageDefinition.ObjectNotDefined : containerStatus.ProductDescription.ToString(),
+                Operation = containerStatus.Operation is null ? MessageDefinition.ObjectNotDefined : containerStatus.Operation.ToString(),
+                Qty = containerStatus.Qty is null ? MessageDefinition.ObjectNotDefined : containerStatus.Qty.ToString(),
+                Unit = containerStatus.UOM is null ? MessageDefinition.ObjectNotDefined : containerStatus.UOM.ToString()
             };
         }
 
@@ -46,7 +46,13 @@ namespace PCI.VisualCheckingUI.UseCase
                 PictureBoxObj.Image.Save($"{AppSettings.Folder}\\{nameCapture}", ImageFormat.Png);
             }
 
-            return _containerTxn.AttachDocumentInContainer(ContainerName, AttachmentTypeEnum.NewDocumentReuse, DocumentName, DocumentRevision, $"{AppSettings.Folder}\\{nameCapture}", DocumentDescription);
+            string sourceFile = $"{AppSettings.Folder}\\{nameCapture}";
+            bool statusAttachment =  _containerTxn.AttachDocumentInContainer(ContainerName, AppSettings.ReuseDocument ? AttachmentTypeEnum.NewDocumentReuse : AttachmentTypeEnum.NewDocumentNOReuse, DocumentName, AppSettings.ReuseDocument ? DocumentRevision : "", sourceFile, DocumentDescription);
+            if (statusAttachment && File.Exists(sourceFile))
+            {
+                File.Delete(sourceFile);
+            }
+            return statusAttachment;
         }
     }
 }
