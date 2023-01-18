@@ -32,6 +32,10 @@ namespace PCI.VisualCheckingUI
 
             //Reset the State
             ResetState();
+
+
+            Bt_TurnOffCamera.Enabled = false;
+            Bt_Camera.Enabled = true;
         }
         private void ExitCamera()
         {
@@ -103,8 +107,15 @@ namespace PCI.VisualCheckingUI
                 // reset stop watch
                 _camera.stopWatch = null;
                 this.Cursor = Cursors.Default;
+
+                Bt_TurnOffCamera.Enabled = true;
+                Bt_Camera.Enabled = false;
             }
-            catch { }
+            catch (Exception ex)
+            {
+                ex.Source = AppSettings.AssemblyName == ex.Source ? MethodBase.GetCurrentMethod().Name : MethodBase.GetCurrentMethod().Name + "." + ex.Source;
+                EventLogUtil.LogErrorEvent(ex.Source, ex);
+            }
         }
 
         public void UpdateCaptureSnapshotManifast(Bitmap image)
@@ -252,6 +263,20 @@ namespace PCI.VisualCheckingUI
                 }
             }
 
+        }
+
+        private void Bt_TurnOffCamera_Click(object sender, EventArgs e)
+        {
+            if (Vsc_Source.VideoSource == null)
+            {
+                MessageBox.Show(MessageDefinition.CameraNotConnected);
+            }
+            else
+            {
+                CloseCurrentVideoSource();
+                Bt_TurnOffCamera.Enabled = false;
+                Bt_Camera.Enabled = true;
+            }
         }
     } 
 }
