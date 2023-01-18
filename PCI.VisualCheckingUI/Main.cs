@@ -27,19 +27,13 @@ namespace PCI.VisualCheckingUI
         private readonly CameraUtil _camera;
         private readonly TransferImage _usecaseTransferImage;
 
-        public Main()
+        public Main(CameraUtil camera, TransferImage usecaseTransferImage)
         {
             // Component Initialization Default
             InitializeComponent();
 
-            // Connect to Network
-            Bootstrapper.ConnectDirectoryServer();
-
-            // Dependency injection
-            var containerBuilder = Bootstrapper.DependencyInjectionBuilder(new ContainerBuilder());
-            var container = containerBuilder.Build();
-            _camera = container.Resolve<CameraUtil>();
-            _usecaseTransferImage = container.Resolve<TransferImage>();
+            _camera = camera;
+            _usecaseTransferImage = usecaseTransferImage;
 
             // Initialize Camera
             GetListCameraUSB();

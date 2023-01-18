@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PCI.VisualCheckingUI.Util
 {
-    class CameraUtil
+    public class CameraUtil
     {
         public FilterInfoCollection videoDevices;
         public VideoCaptureDevice videoDevice;

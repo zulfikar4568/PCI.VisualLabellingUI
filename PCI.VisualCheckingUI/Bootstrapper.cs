@@ -18,6 +18,7 @@ namespace PCI.VisualCheckingUI
             containerBuilder.RegisterModule(new Driver.Driver());
             containerBuilder.RegisterModule(new Repository.Repository());
             containerBuilder.RegisterModule(new UseCase.UseCase());
+            containerBuilder.RegisterType<Main>().AsSelf();
 
             return containerBuilder;
         }
