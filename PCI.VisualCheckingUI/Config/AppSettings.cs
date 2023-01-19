@@ -32,14 +32,14 @@ namespace PCI.VisualCheckingUI.Config
         #endregion
 
         #region CONFIG ACCOUNT ExCore
-        private static string ExCoreHost
+        public static string ExCoreHost
         {
             get
             {
                 return ConfigurationManager.AppSettings["ExCoreHost"];
             }
         }
-        private static string ExCorePort
+        public static string ExCorePort
         {
             get
             {

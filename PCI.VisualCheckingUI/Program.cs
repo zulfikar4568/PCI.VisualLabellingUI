@@ -18,6 +18,14 @@ namespace PCI.VisualCheckingUI
         [STAThread]
         static void Main()
         {
+            // Check Connection
+            bool status = Bootstrapper.CheckConnection();
+            if (!status)
+            {
+                MessageBox.Show("Cannot establish the connection to the server, make sure the IP Server and Port Reachable, the app will close!");
+                Environment.Exit(0);
+            }
+
             // Connect to Network
             Bootstrapper.ConnectDirectoryServer();
 
