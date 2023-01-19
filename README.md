@@ -1,8 +1,19 @@
-# Visual Labelling UI
-Camera integration with Server MES Siemens
+<h1 align="center">Visual Labelling UI</h1>
 
-# How this service were created
-This service Install TopShelf in NuGetPackage, and this is using Timer that mean every 1 second would be write timestamp date and time to certain file.
+<p align="center">
+  <a href="" target="blank"><img src="./Images/Application.png" alt="Vechr Logo" /></a>
+  <br>
+  <i>Store the Image from the camera integration into Opcenter Siemens.</i>
+  <br>
+</p>
+
+# Change the Config of the Application
+Edit the hosts in your `Endpoints.config`
+```config
+<endpoint address="https://<your server host>/CamstarWCFServices/DirectAccessService.svc"
+```
+
+And Edit the Configuration Application in `App.config`
 
 # Enabled Event Log on windows Machine
 - Log on to the computer as an administrator.
@@ -12,23 +23,30 @@ This service Install TopShelf in NuGetPackage, and this is using Timer that mean
 Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog
 ```
 - Right-click Eventlog, and then click Permissions. The Permissions for Eventlog dialog box appears.
-
-![Permission Event Log](./Images/EventLogPermission1.jpg)
+  
+<p align="center">
+  <a href="" target="blank"><img src="./Images/EventLogPermission1.jpg" alt="Permission Event Log" /></a>
+</p>
 
 - Click Add, add the user account or group that you want and set the following permissions: `Full Control`.
 
-![Permission Event Log](./Images/EventLogPermission2.jpg)
+<p align="center">
+  <a href="" target="blank"><img src="./Images/EventLogPermission2.jpg" alt="Permission Event Log" /></a>
+</p>
 
 - Locate the following registry subkey
 ```
 Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security
 ```
-
-![Permission Event Log](./Images/EventLogPermission3.jpg)
+<p align="center">
+  <a href="" target="blank"><img src="./Images/EventLogPermission3.jpg" alt="Permission Event Log" /></a>
+</p>
 
 - Click Add, add the user account or group that you want and set the following permissions: `Full Control`.
 
-![Permission Event Log](./Images/EventLogPermission4.jpg)
+<p align="center">
+  <a href="" target="blank"><img src="./Images/EventLogPermission4.jpg" alt="Permission Event Log" /></a>
+</p>
 
 # License & Copy Right
 © M. Zulfikar Isnaen, This is Under [MIT License](LICENSE).
