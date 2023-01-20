@@ -11,7 +11,13 @@ namespace PCI.VisualLabellingUI.Config
 {
     public static class AppSettings
     {
-        public static string AssemblyName { get; set; }
+        public static string AssemblyName
+        {
+            get
+            {
+                return System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+            }
+        }
         #region TIME
         public static TimeSpan UTCOffset
         {
