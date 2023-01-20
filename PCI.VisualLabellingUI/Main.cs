@@ -6,8 +6,8 @@ using System.Windows.Forms;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using PCI.VisualLabellingUI.Config;
+using PCI.VisualLabellingUI.Entity;
 using PCI.VisualLabellingUI.UseCase;
-using PCI.VisualLabellingUI.UseCase.Model;
 using PCI.VisualLabellingUI.Util;
 using static PCI.VisualLabellingUI.Util.CameraUtil;
 
@@ -246,7 +246,7 @@ namespace PCI.VisualLabellingUI
         {
             if (e.KeyCode == Keys.Enter)
             {
-                ContainerStatusModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
+                ContainerModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
                 if (dataContainer is null)
                 {
                     MessageBox.Show(MessageDefinition.ProductNotFound);

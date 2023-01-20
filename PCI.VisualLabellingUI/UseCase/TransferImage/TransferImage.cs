@@ -1,6 +1,6 @@
 ﻿using Camstar.WCF.ObjectStack;
 using PCI.VisualLabellingUI.Config;
-using PCI.VisualLabellingUI.UseCase.Model;
+using PCI.VisualLabellingUI.Entity;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
@@ -19,11 +19,11 @@ namespace PCI.VisualLabellingUI.UseCase
         {
             _containerTxn = containerTxn;
         }
-        public ContainerStatusModel ContainerStatusData(string Container)
+        public ContainerModel ContainerStatusData(string Container)
         {
             ViewContainerStatus containerStatus = _containerTxn.GetCurrentContainer(Container);
             if (containerStatus == null) return null;
-            return new ContainerStatusModel
+            return new ContainerModel
             {
                 Product = containerStatus.Product is null ? MessageDefinition.ObjectNotDefined : containerStatus.Product.ToString(),
                 ProductDescription = containerStatus.ProductDescription is null ? MessageDefinition.ObjectNotDefined : containerStatus.ProductDescription.ToString(),

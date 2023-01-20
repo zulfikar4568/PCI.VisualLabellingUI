@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCI.VisualLabellingUI.UseCase.Model
+namespace PCI.VisualLabellingUI.Entity
 {
-    public class ContainerStatusModel
+    public class ContainerModel
     {
         public string Product { get; set; }
         public string ProductDescription { get; set; }
