@@ -1,7 +1,7 @@
 <h1 align="center">Visual Labelling UI</h1>
 
 <p align="center">
-  <a href="" target="blank"><img src="./Images/Application.png" alt="Vechr Logo" /></a>
+  <a href="" target="blank"><img src="https://user-images.githubusercontent.com/64786139/216618716-0b8b7c78-c514-49bb-91b3-a6934262b45e.png" alt="App" /></a>
   <br>
   <i>Store the Image from the camera integration into Opcenter Siemens.</i>
   <br>
