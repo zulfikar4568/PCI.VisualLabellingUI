@@ -1,4 +1,9 @@
-<h1 align="center">Visual Labelling UI</h1>
+<h1 align="center">
+  Visual Labelling UI </br>
+  <img src="https://github.com/zulfikar4568/PCI.VisualLabellingUI/actions/workflows/dotnet.yml/badge.svg" />
+  <a href="https://github.com/zulfikar4568/PCI.VisualLabellingUI/releases/latest"><img src="https://img.shields.io/github/release/zulfikar4568/PCI.VisualLabellingUI.svg" /></a>
+  <a href="https://github.com/zulfikar4568/PCI.VisualLabellingUI/blob/master/LICENSE"><img src="https://img.shields.io/github/license/zulfikar4568/PCI.VisualLabellingUI.svg" /></a>
+</h1>
 
 <p align="center">
   <a href="" target="blank"><img src="https://user-images.githubusercontent.com/64786139/216618716-0b8b7c78-c514-49bb-91b3-a6934262b45e.png" alt="App" /></a>
