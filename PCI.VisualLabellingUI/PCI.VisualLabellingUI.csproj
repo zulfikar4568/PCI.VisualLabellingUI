@@ -2,6 +2,9 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B46B777C-8B56-476E-94CA-52A9D8924000}</ProjectGuid>
@@ -63,20 +66,25 @@
     <Reference Include="Autofac, Version=6.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.6.5.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="Camstar.Exceptions">
-      <HintPath>..\..\PCI.SafetyTestService\Camstar\Camstar.Exceptions.dll</HintPath>
+    <Reference Include="Camstar.Exceptions, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Camstar\Camstar.Exceptions.dll</HintPath>
     </Reference>
-    <Reference Include="Camstar.Util">
-      <HintPath>..\..\PCI.SafetyTestService\Camstar\Camstar.Util.dll</HintPath>
+    <Reference Include="Camstar.Util, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Camstar\Camstar.Util.dll</HintPath>
     </Reference>
-    <Reference Include="Camstar.WCFClient">
-      <HintPath>..\..\PCI.SafetyTestService\Camstar\Camstar.WCFClient.dll</HintPath>
+    <Reference Include="Camstar.WCFClient, Version=8.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Camstar\Camstar.WCFClient.dll</HintPath>
     </Reference>
-    <Reference Include="Camstar.WCFClientBase">
-      <HintPath>..\..\PCI.SafetyTestService\Camstar\Camstar.WCFClientBase.dll</HintPath>
+    <Reference Include="Camstar.WCFClientBase, Version=8.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Camstar\Camstar.WCFClientBase.dll</HintPath>
     </Reference>
-    <Reference Include="InSiteXMLClient">
-      <HintPath>..\..\PCI.SafetyTestService\Camstar\InSiteXMLClient.dll</HintPath>
+    <Reference Include="InSiteXMLClient, Version=8.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Camstar\InSiteXMLClient.dll</HintPath>
     </Reference>
     <Reference Include="Krypton.Docking, Version=70.22.11.312, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Docking.70.22.11.312\lib\net48\Krypton.Docking.dll</HintPath>
