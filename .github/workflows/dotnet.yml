@@ -23,11 +23,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+  
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
+    
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
     
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
@@ -35,11 +38,8 @@ jobs:
     - name: Restore Nuget Packages
       run: nuget restore PCI.VisualLabellingUI.sln
     
-    - name: Restore dependencies
-      run: dotnet restore
-      
-    - name: Build
-      run: dotnet build --no-restore
+    - name: Build the Solution
+      run: msbuild PCI.VisualLabellingUI.sln /p:Configuration=Release
       
     - name: Install Versionize
       run: dotnet tool install --global Versionize
