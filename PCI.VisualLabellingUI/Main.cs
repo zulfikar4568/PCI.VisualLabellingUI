@@ -85,7 +85,7 @@ namespace PCI.VisualLabellingUI
                 }
                 else
                 {
-                    MessageBox.Show(MessageDefinition.NoDeviceFound);
+                    MessageBox.Show(MessageDefinition.NoDeviceFound, "Device Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 _camera.videoDevice = new VideoCaptureDevice(_camera.videoDevices[Convert.ToInt32(_camera.Usbcamera)].MonikerString);
@@ -98,7 +98,7 @@ namespace PCI.VisualLabellingUI
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.ToString());
+                MessageBox.Show(err.ToString(), "Device Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void OpenVideoSource(IVideoSource source)
@@ -137,11 +137,11 @@ namespace PCI.VisualLabellingUI
                 bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
                 if (status)
                 {
-                    MessageBox.Show(MessageDefinition.SendImageSuccess);
+                    MessageBox.Show(MessageDefinition.SendImageSuccess, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ResetState();
                 } else
                 {
-                    MessageBox.Show(MessageDefinition.SendImageFailed);
+                    MessageBox.Show(MessageDefinition.SendImageFailed, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ResetState();
                 }
             }
@@ -186,7 +186,7 @@ namespace PCI.VisualLabellingUI
         {
             if (Vsc_Source.VideoSource == null)
             {
-                MessageBox.Show(MessageDefinition.CameraNotConnected);
+                MessageBox.Show(MessageDefinition.CameraNotConnected, "Device Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             } else
             {
                 Lb_Instruction.Text = MessageDefinition.Waiting;
@@ -254,7 +254,7 @@ namespace PCI.VisualLabellingUI
                 ContainerModel dataContainer = _usecaseTransferImage.ContainerStatusData(Tb_Container.Text);
                 if (dataContainer is null)
                 {
-                    MessageBox.Show(MessageDefinition.ProductNotFound);
+                    MessageBox.Show(MessageDefinition.ProductNotFound, "Opcenter Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 } else
                 {
                     Bt_Capture.Enabled = true;
@@ -277,7 +277,7 @@ namespace PCI.VisualLabellingUI
         {
             if (Vsc_Source.VideoSource == null)
             {
-                MessageBox.Show(MessageDefinition.CameraNotConnected);
+                MessageBox.Show(MessageDefinition.CameraNotConnected, "Device Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

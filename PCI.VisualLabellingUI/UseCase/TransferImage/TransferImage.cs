@@ -48,10 +48,7 @@ namespace PCI.VisualLabellingUI.UseCase
 
             string sourceFile = $"{AppSettings.Folder}\\{nameCapture}";
             bool statusAttachment =  _containerTxn.AttachDocumentInContainer(ContainerName, AppSettings.ReuseDocument ? AttachmentTypeEnum.NewDocumentReuse : AttachmentTypeEnum.NewDocumentNOReuse, DocumentName, AppSettings.ReuseDocument ? DocumentRevision : "", sourceFile, DocumentDescription);
-            if (statusAttachment && File.Exists(sourceFile))
-            {
-                File.Delete(sourceFile);
-            }
+            if (File.Exists(sourceFile)) File.Delete(sourceFile);
             return statusAttachment;
         }
     }
