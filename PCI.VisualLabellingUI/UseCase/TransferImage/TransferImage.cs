@@ -51,5 +51,17 @@ namespace PCI.VisualLabellingUI.UseCase
             if (File.Exists(sourceFile)) File.Delete(sourceFile);
             return statusAttachment;
         }
+        public bool OperationEnforcement(ContainerModel data)
+        {
+            if (AppSettings.OperationName != null && AppSettings.OperationName != "")
+            {
+                if (data.Operation != AppSettings.OperationName)
+                {
+                    MessageBox.Show(MessageDefinition.OperationEnforcement + $"\nPosition: {data.Operation}", "Opcenter Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

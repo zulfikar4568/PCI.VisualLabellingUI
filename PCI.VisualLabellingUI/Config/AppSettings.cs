@@ -147,7 +147,17 @@ namespace PCI.VisualLabellingUI.Config
                 return Convert.ToBoolean(ConfigurationManager.AppSettings["ReuseDocument"]);
             }
         }
-        
+
+        #endregion
+
+        #region Operation Constraint
+        public static string OperationName
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["OperationName"];
+            }
+        }
         #endregion
     }
 }
