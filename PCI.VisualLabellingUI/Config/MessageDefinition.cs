@@ -18,5 +18,6 @@ namespace PCI.VisualLabellingUI.Config
         public static string MessageAfterScan = ConfigurationManager.AppSettings["MessageAfterScan"] is null || ConfigurationManager.AppSettings["MessageAfterScan"] == "" ? "Put the camera in correct position then please click capture button to catch the image!" : ConfigurationManager.AppSettings["MessageAfterScan"];
         public static string ProductNotFound = ConfigurationManager.AppSettings["ProductNotFound"] is null || ConfigurationManager.AppSettings["ProductNotFound"] == "" ? "Container / Product Serial Number doesn't exists!" : ConfigurationManager.AppSettings["ProductNotFound"];
         public static string ObjectNotDefined = ConfigurationManager.AppSettings["ObjectNotDefined"] is null || ConfigurationManager.AppSettings["ObjectNotDefined"] == "" ? "Not defined" : ConfigurationManager.AppSettings["ObjectNotDefined"];
+        public static string OperationEnforcement = ConfigurationManager.AppSettings["OperationEnforcement"] is null || ConfigurationManager.AppSettings["OperationEnforcement"] == "" ? "Identifier / Product Unit incorrect position!" : ConfigurationManager.AppSettings["OperationEnforcement"];
     }
 }

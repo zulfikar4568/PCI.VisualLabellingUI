@@ -257,6 +257,9 @@ namespace PCI.VisualLabellingUI
                     MessageBox.Show(MessageDefinition.ProductNotFound, "Opcenter Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 } else
                 {
+                    // Operation Enforcement
+                    if (!_usecaseTransferImage.OperationEnforcement(dataContainer)) return;
+
                     Bt_Capture.Enabled = true;
                     Tb_Container.Enabled = false;
                     Lb_Instruction.Text = MessageDefinition.MessageAfterScan;
