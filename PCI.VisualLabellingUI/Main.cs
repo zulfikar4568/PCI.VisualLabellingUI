@@ -29,6 +29,8 @@ namespace PCI.VisualLabellingUI
             this.Location = new Point(0, 0);
             this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Size.Width / 2, Screen.PrimaryScreen.WorkingArea.Size.Height);
 
+            Tb_Message.Enabled = false;
+
             _camera = camera;
             _usecaseTransferImage = usecaseTransferImage;
 
