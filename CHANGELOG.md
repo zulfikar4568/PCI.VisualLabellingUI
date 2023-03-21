@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.1.0"></a>
+## [1.1.0](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.1.0) (2023-3-21)
+
+### Features
+
+* operation enforcement ([b70bd5f](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/b70bd5fd9dc86a40eb16d85a9b7a119a4adb7582))
+
+### Bug Fixes
+
+* message textbox ([6533013](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/6533013d12850d8b3811bd2ccded3678adae53b9))
+* position cursor keep in SN Texbox ([7693cc2](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/7693cc293a291d0476ffee51abda92db05218264))
+
+### Other
+
+* Merge pull request #1 from zulfikar4568/feat/feedback-1 ([0fda793](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/0fda793bdc06cd6e4870dba6a1291891e37467fd))
+* remove timer pooling interval cfg ([8f22201](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/8f22201abdf424fd900d35ea327da715153427d6))
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.0.2) (2023-3-6)
 
