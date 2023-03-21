@@ -30,6 +30,8 @@ namespace PCI.VisualLabellingUI
             this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Size.Width / 2, Screen.PrimaryScreen.WorkingArea.Size.Height);
 
             Tb_Message.Enabled = false;
+            Tb_Container.Focus();
+            Tb_Container.SelectionStart = Tb_Container.Text.Length;
 
             _camera = camera;
             _usecaseTransferImage = usecaseTransferImage;
@@ -120,6 +122,9 @@ namespace PCI.VisualLabellingUI
 
                 Bt_TurnOffCamera.Enabled = true;
                 Bt_Camera.Enabled = false;
+
+                Tb_Container.Focus();
+                Tb_Container.SelectionStart = Tb_Container.Text.Length;
             }
             catch (Exception ex)
             {
@@ -235,11 +240,13 @@ namespace PCI.VisualLabellingUI
 
         private void ResetState()
         {
+            Tb_Container.Enabled = true;
+            Tb_Container.Text = "";
+            Tb_Container.Focus();
+            Tb_Container.SelectionStart = Tb_Container.Text.Length;
             Pb_Picture.Image = null;
             Bt_Capture.Enabled = false;
-            Tb_Container.Enabled = true;
             Tb_Message.Text = "";
-            Tb_Container.Text = "";
             Lb_Instruction.Text = MessageDefinition.MessageBeforeScan;
             Lb_Instruction.ForeColor = Color.White;
             Lb_Instruction.BackColor = Color.Green;
