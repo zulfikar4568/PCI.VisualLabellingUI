@@ -30,7 +30,7 @@ namespace PCI.VisualLabellingUI
             status = Bootstrapper.ConnectDirectoryServer();
             if (!status)
             {
-                MessageBox.Show($"Cannot establish the connection to the ${AppSettings.UNCPath}, make sure the ${AppSettings.UNCPath} Reachable, the app will close!", "Network Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Cannot establish the connection to the {AppSettings.UNCPath}, make sure the {AppSettings.UNCPath} Reachable, the app will close!", "Network Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(0);
             }
 
