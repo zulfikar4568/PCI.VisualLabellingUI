@@ -93,15 +93,19 @@ namespace PCI.VisualLabellingUI
             // 
             // UIPalette
             // 
+            this.UIPalette.BasePaletteMode = Krypton.Toolkit.PaletteMode.Office365Blue;
             this.UIPalette.FormStyles.FormMain.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.UIPalette.FormStyles.FormMain.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.UIPalette.FormStyles.FormMain.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.UIPalette.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.UIPalette.FormStyles.FormMain.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
+            this.UIPalette.FormStyles.FormMain.StateCommon.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.UIPalette.FormStyles.FormMain.StateCommon.Border.Rounding = 10F;
             this.UIPalette.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.UIPalette.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.UIPalette.HeaderStyles.HeaderForm.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.UIPalette.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             this.UIPalette.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, -1, -1, -1);
             // 
@@ -121,6 +125,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.kryptonTableLayoutPanel1.Size = new System.Drawing.Size(1225, 873);
             this.kryptonTableLayoutPanel1.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel1.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel1.TabIndex = 2;
             // 
             // kryptonTableLayoutPanel2
@@ -141,6 +146,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.kryptonTableLayoutPanel2.Size = new System.Drawing.Size(852, 867);
             this.kryptonTableLayoutPanel2.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel2.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel2.TabIndex = 4;
             // 
             // Vsc_Source
@@ -183,11 +189,15 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel3.Size = new System.Drawing.Size(846, 169);
             this.kryptonTableLayoutPanel3.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel3.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel3.TabIndex = 3;
             // 
             // Gb_Action
             // 
+            this.Gb_Action.CaptionStyle = Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.Gb_Action.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Gb_Action.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.Gb_Action.GroupBorderStyle = Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.Gb_Action.Location = new System.Drawing.Point(3, 3);
             this.Gb_Action.Name = "Gb_Action";
             // 
@@ -196,6 +206,7 @@ namespace PCI.VisualLabellingUI
             this.Gb_Action.Panel.Controls.Add(this.kryptonTableLayoutPanel6);
             this.Gb_Action.Size = new System.Drawing.Size(417, 163);
             this.Gb_Action.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.Gb_Action.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Gb_Action.TabIndex = 4;
             this.Gb_Action.Values.Heading = "Action :";
             // 
@@ -215,6 +226,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel6.Size = new System.Drawing.Size(413, 135);
             this.kryptonTableLayoutPanel6.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel6.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel6.TabIndex = 4;
             // 
             // Bt_Reset
@@ -228,20 +240,25 @@ namespace PCI.VisualLabellingUI
             this.Bt_Reset.OverrideDefault.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.OverrideDefault.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.OverrideDefault.Back.ColorAngle = 45F;
+            this.Bt_Reset.OverrideDefault.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.OverrideDefault.Border.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.OverrideDefault.Border.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.OverrideDefault.Border.ColorAngle = 45F;
             this.Bt_Reset.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Bt_Reset.OverrideDefault.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.OverrideDefault.Border.Rounding = 8F;
             this.Bt_Reset.OverrideDefault.Border.Width = 1;
             this.Bt_Reset.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Reset.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Reset.OverrideDefault.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Reset.OverrideDefault.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Reset.OverrideFocus.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.OverrideFocus.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.OverrideFocus.Back.ColorAngle = 135F;
             this.Bt_Reset.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.OverrideFocus.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.OverrideFocus.Border.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.OverrideFocus.Border.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.OverrideFocus.Border.ColorAngle = 135F;
@@ -249,29 +266,37 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Reset.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.OverrideFocus.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.OverrideFocus.Border.Rounding = 8F;
             this.Bt_Reset.OverrideFocus.Border.Width = 1;
             this.Bt_Reset.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Reset.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Reset.OverrideFocus.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Reset.OverrideFocus.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Reset.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.Bt_Reset.Size = new System.Drawing.Size(403, 48);
             this.Bt_Reset.StateCommon.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StateCommon.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StateCommon.Back.ColorAngle = 45F;
             this.Bt_Reset.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Reset.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StateCommon.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StateCommon.Border.Rounding = 8F;
             this.Bt_Reset.StateCommon.Border.Width = 1;
             this.Bt_Reset.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Reset.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.Bt_Reset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Reset.StateCommon.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Reset.StateCommon.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Reset.StateNormal.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StateNormal.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StateNormal.Back.ColorAngle = 45F;
             this.Bt_Reset.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StateNormal.Border.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StateNormal.Border.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StateNormal.Border.ColorAngle = 45F;
@@ -279,12 +304,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Reset.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StateNormal.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StateNormal.Border.Rounding = 8F;
             this.Bt_Reset.StateNormal.Border.Width = 1;
             this.Bt_Reset.StatePressed.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StatePressed.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StatePressed.Back.ColorAngle = 135F;
             this.Bt_Reset.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StatePressed.Border.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StatePressed.Border.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StatePressed.Border.ColorAngle = 135F;
@@ -292,12 +319,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Reset.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StatePressed.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StatePressed.Border.Rounding = 8F;
             this.Bt_Reset.StatePressed.Border.Width = 1;
             this.Bt_Reset.StateTracking.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StateTracking.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StateTracking.Back.ColorAngle = 45F;
             this.Bt_Reset.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StateTracking.Border.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_Reset.StateTracking.Border.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_Reset.StateTracking.Border.ColorAngle = 45F;
@@ -305,6 +334,7 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Reset.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Reset.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Reset.StateTracking.Border.Rounding = 8F;
             this.Bt_Reset.StateTracking.Border.Width = 1;
             this.Bt_Reset.TabIndex = 9;
@@ -323,20 +353,25 @@ namespace PCI.VisualLabellingUI
             this.Bt_Capture.OverrideDefault.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.OverrideDefault.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.OverrideDefault.Back.ColorAngle = 45F;
+            this.Bt_Capture.OverrideDefault.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.OverrideDefault.Border.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.OverrideDefault.Border.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.OverrideDefault.Border.ColorAngle = 45F;
             this.Bt_Capture.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Bt_Capture.OverrideDefault.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.OverrideDefault.Border.Rounding = 8F;
             this.Bt_Capture.OverrideDefault.Border.Width = 1;
             this.Bt_Capture.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Capture.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Capture.OverrideDefault.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Capture.OverrideDefault.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Capture.OverrideFocus.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.OverrideFocus.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.OverrideFocus.Back.ColorAngle = 135F;
             this.Bt_Capture.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.OverrideFocus.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.OverrideFocus.Border.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.OverrideFocus.Border.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.OverrideFocus.Border.ColorAngle = 135F;
@@ -344,33 +379,44 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Capture.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.OverrideFocus.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.OverrideFocus.Border.Rounding = 8F;
             this.Bt_Capture.OverrideFocus.Border.Width = 1;
             this.Bt_Capture.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Capture.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Capture.OverrideFocus.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Capture.OverrideFocus.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Capture.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.Bt_Capture.Size = new System.Drawing.Size(403, 47);
             this.Bt_Capture.StateCommon.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StateCommon.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StateCommon.Back.ColorAngle = 45F;
             this.Bt_Capture.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Capture.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StateCommon.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateCommon.Border.Rounding = 8F;
             this.Bt_Capture.StateCommon.Border.Width = 1;
             this.Bt_Capture.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Capture.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.Bt_Capture.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Capture.StateCommon.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Capture.StateCommon.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Capture.StateDisabled.Back.Color1 = System.Drawing.Color.Silver;
             this.Bt_Capture.StateDisabled.Back.Color2 = System.Drawing.Color.Gray;
+            this.Bt_Capture.StateDisabled.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
             this.Bt_Capture.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.Bt_Capture.StateDisabled.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Capture.StateDisabled.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Capture.StateNormal.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StateNormal.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StateNormal.Back.ColorAngle = 45F;
             this.Bt_Capture.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateNormal.Border.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StateNormal.Border.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StateNormal.Border.ColorAngle = 45F;
@@ -378,12 +424,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Capture.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StateNormal.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateNormal.Border.Rounding = 8F;
             this.Bt_Capture.StateNormal.Border.Width = 1;
             this.Bt_Capture.StatePressed.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StatePressed.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StatePressed.Back.ColorAngle = 135F;
             this.Bt_Capture.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StatePressed.Border.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StatePressed.Border.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StatePressed.Border.ColorAngle = 135F;
@@ -391,12 +439,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Capture.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StatePressed.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StatePressed.Border.Rounding = 8F;
             this.Bt_Capture.StatePressed.Border.Width = 1;
             this.Bt_Capture.StateTracking.Back.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StateTracking.Back.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StateTracking.Back.ColorAngle = 45F;
             this.Bt_Capture.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateTracking.Border.Color1 = System.Drawing.Color.Blue;
             this.Bt_Capture.StateTracking.Border.Color2 = System.Drawing.Color.DarkCyan;
             this.Bt_Capture.StateTracking.Border.ColorAngle = 45F;
@@ -404,6 +454,7 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Capture.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Capture.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Capture.StateTracking.Border.Rounding = 8F;
             this.Bt_Capture.StateTracking.Border.Width = 1;
             this.Bt_Capture.TabIndex = 6;
@@ -412,7 +463,10 @@ namespace PCI.VisualLabellingUI
             // 
             // Gb_CameraSetting
             // 
+            this.Gb_CameraSetting.CaptionStyle = Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.Gb_CameraSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Gb_CameraSetting.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.Gb_CameraSetting.GroupBorderStyle = Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.Gb_CameraSetting.Location = new System.Drawing.Point(426, 3);
             this.Gb_CameraSetting.Name = "Gb_CameraSetting";
             // 
@@ -421,6 +475,7 @@ namespace PCI.VisualLabellingUI
             this.Gb_CameraSetting.Panel.Controls.Add(this.kryptonTableLayoutPanel4);
             this.Gb_CameraSetting.Size = new System.Drawing.Size(417, 163);
             this.Gb_CameraSetting.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.Gb_CameraSetting.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Gb_CameraSetting.TabIndex = 5;
             this.Gb_CameraSetting.Values.Heading = "Camera Setting :";
             // 
@@ -440,6 +495,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel4.Size = new System.Drawing.Size(413, 135);
             this.kryptonTableLayoutPanel4.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel4.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel4.TabIndex = 2;
             // 
             // Cb_VideoInput
@@ -456,16 +512,20 @@ namespace PCI.VisualLabellingUI
             this.Cb_VideoInput.StateCommon.ComboBox.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Cb_VideoInput.StateCommon.ComboBox.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Cb_VideoInput.StateCommon.ComboBox.Border.Rounding = 20F;
             this.Cb_VideoInput.StateCommon.ComboBox.Border.Width = 1;
             this.Cb_VideoInput.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.Cb_VideoInput.StateCommon.Item.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Cb_VideoInput.StateCommon.Item.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Cb_VideoInput.StateCommon.Item.Border.Rounding = 8F;
             this.Cb_VideoInput.StateCommon.Item.Border.Width = 1;
             this.Cb_VideoInput.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cb_VideoInput.StateCommon.Item.Content.ShortText.Hint = Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.Cb_VideoInput.StateCommon.Item.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Cb_VideoInput.StateCommon.Item.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Cb_VideoInput.TabIndex = 9;
             this.Cb_VideoInput.Text = "VideoDevice";
             // 
@@ -485,6 +545,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel5.Size = new System.Drawing.Size(407, 62);
             this.kryptonTableLayoutPanel5.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel5.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel5.TabIndex = 10;
             // 
             // Bt_Camera
@@ -498,20 +559,25 @@ namespace PCI.VisualLabellingUI
             this.Bt_Camera.OverrideDefault.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.OverrideDefault.Back.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.OverrideDefault.Back.ColorAngle = 45F;
+            this.Bt_Camera.OverrideDefault.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.OverrideDefault.Border.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.OverrideDefault.Border.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.OverrideDefault.Border.ColorAngle = 45F;
             this.Bt_Camera.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Bt_Camera.OverrideDefault.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.OverrideDefault.Border.Rounding = 8F;
             this.Bt_Camera.OverrideDefault.Border.Width = 1;
             this.Bt_Camera.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Camera.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Camera.OverrideDefault.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Camera.OverrideDefault.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Camera.OverrideFocus.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.OverrideFocus.Back.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.OverrideFocus.Back.ColorAngle = 135F;
             this.Bt_Camera.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.OverrideFocus.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.OverrideFocus.Border.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.OverrideFocus.Border.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.OverrideFocus.Border.ColorAngle = 135F;
@@ -519,33 +585,44 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Camera.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.OverrideFocus.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.OverrideFocus.Border.Rounding = 8F;
             this.Bt_Camera.OverrideFocus.Border.Width = 1;
             this.Bt_Camera.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Camera.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Camera.OverrideFocus.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Camera.OverrideFocus.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Camera.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.Bt_Camera.Size = new System.Drawing.Size(184, 42);
             this.Bt_Camera.StateCommon.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StateCommon.Back.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StateCommon.Back.ColorAngle = 45F;
             this.Bt_Camera.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Camera.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StateCommon.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateCommon.Border.Rounding = 8F;
             this.Bt_Camera.StateCommon.Border.Width = 1;
             this.Bt_Camera.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_Camera.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.Bt_Camera.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Camera.StateCommon.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Camera.StateCommon.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Camera.StateDisabled.Back.Color1 = System.Drawing.Color.Silver;
             this.Bt_Camera.StateDisabled.Back.Color2 = System.Drawing.Color.Gray;
+            this.Bt_Camera.StateDisabled.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
             this.Bt_Camera.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.Bt_Camera.StateDisabled.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_Camera.StateDisabled.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_Camera.StateNormal.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StateNormal.Back.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StateNormal.Back.ColorAngle = 45F;
             this.Bt_Camera.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateNormal.Border.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StateNormal.Border.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StateNormal.Border.ColorAngle = 45F;
@@ -553,12 +630,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Camera.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StateNormal.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateNormal.Border.Rounding = 8F;
             this.Bt_Camera.StateNormal.Border.Width = 1;
             this.Bt_Camera.StatePressed.Back.Color1 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StatePressed.Back.Color2 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StatePressed.Back.ColorAngle = 135F;
             this.Bt_Camera.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StatePressed.Border.Color1 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StatePressed.Border.Color2 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StatePressed.Border.ColorAngle = 135F;
@@ -566,12 +645,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Camera.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StatePressed.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StatePressed.Border.Rounding = 8F;
             this.Bt_Camera.StatePressed.Border.Width = 1;
             this.Bt_Camera.StateTracking.Back.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StateTracking.Back.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StateTracking.Back.ColorAngle = 45F;
             this.Bt_Camera.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateTracking.Border.Color1 = System.Drawing.Color.MediumSlateBlue;
             this.Bt_Camera.StateTracking.Border.Color2 = System.Drawing.Color.MediumOrchid;
             this.Bt_Camera.StateTracking.Border.ColorAngle = 45F;
@@ -579,6 +660,7 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_Camera.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_Camera.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_Camera.StateTracking.Border.Rounding = 8F;
             this.Bt_Camera.StateTracking.Border.Width = 1;
             this.Bt_Camera.TabIndex = 11;
@@ -596,20 +678,25 @@ namespace PCI.VisualLabellingUI
             this.Bt_TurnOffCamera.OverrideDefault.Back.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.OverrideDefault.Back.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.OverrideDefault.Back.ColorAngle = 45F;
+            this.Bt_TurnOffCamera.OverrideDefault.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.OverrideDefault.Border.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.OverrideDefault.Border.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.OverrideDefault.Border.ColorAngle = 45F;
             this.Bt_TurnOffCamera.OverrideDefault.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Bt_TurnOffCamera.OverrideDefault.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.OverrideDefault.Border.Rounding = 8F;
             this.Bt_TurnOffCamera.OverrideDefault.Border.Width = 1;
             this.Bt_TurnOffCamera.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_TurnOffCamera.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_TurnOffCamera.OverrideDefault.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_TurnOffCamera.OverrideDefault.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_TurnOffCamera.OverrideFocus.Back.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.OverrideFocus.Back.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.OverrideFocus.Back.ColorAngle = 135F;
             this.Bt_TurnOffCamera.OverrideFocus.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.OverrideFocus.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.OverrideFocus.Border.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.OverrideFocus.Border.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.OverrideFocus.Border.ColorAngle = 135F;
@@ -617,33 +704,44 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_TurnOffCamera.OverrideFocus.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.OverrideFocus.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.OverrideFocus.Border.Rounding = 8F;
             this.Bt_TurnOffCamera.OverrideFocus.Border.Width = 1;
             this.Bt_TurnOffCamera.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_TurnOffCamera.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_TurnOffCamera.OverrideFocus.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_TurnOffCamera.OverrideFocus.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_TurnOffCamera.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.Bt_TurnOffCamera.Size = new System.Drawing.Size(183, 42);
             this.Bt_TurnOffCamera.StateCommon.Back.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StateCommon.Back.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StateCommon.Back.ColorAngle = 45F;
             this.Bt_TurnOffCamera.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_TurnOffCamera.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StateCommon.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateCommon.Border.Rounding = 8F;
             this.Bt_TurnOffCamera.StateCommon.Border.Width = 1;
             this.Bt_TurnOffCamera.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_TurnOffCamera.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.Bt_TurnOffCamera.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_TurnOffCamera.StateCommon.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_TurnOffCamera.StateCommon.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_TurnOffCamera.StateDisabled.Back.Color1 = System.Drawing.Color.Silver;
             this.Bt_TurnOffCamera.StateDisabled.Back.Color2 = System.Drawing.Color.Gray;
+            this.Bt_TurnOffCamera.StateDisabled.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
             this.Bt_TurnOffCamera.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.Bt_TurnOffCamera.StateDisabled.Content.ShortText.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.Bt_TurnOffCamera.StateDisabled.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.Bt_TurnOffCamera.StateNormal.Back.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StateNormal.Back.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StateNormal.Back.ColorAngle = 45F;
             this.Bt_TurnOffCamera.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateNormal.Border.Color1 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StateNormal.Border.Color2 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StateNormal.Border.ColorAngle = 45F;
@@ -651,12 +749,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_TurnOffCamera.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StateNormal.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateNormal.Border.Rounding = 8F;
             this.Bt_TurnOffCamera.StateNormal.Border.Width = 1;
             this.Bt_TurnOffCamera.StatePressed.Back.Color1 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StatePressed.Back.Color2 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StatePressed.Back.ColorAngle = 135F;
             this.Bt_TurnOffCamera.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StatePressed.Border.Color1 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StatePressed.Border.Color2 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StatePressed.Border.ColorAngle = 135F;
@@ -664,12 +764,14 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_TurnOffCamera.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StatePressed.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StatePressed.Border.Rounding = 8F;
             this.Bt_TurnOffCamera.StatePressed.Border.Width = 1;
             this.Bt_TurnOffCamera.StateTracking.Back.Color1 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StateTracking.Back.Color2 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StateTracking.Back.ColorAngle = 45F;
             this.Bt_TurnOffCamera.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateTracking.Border.Color1 = System.Drawing.Color.DeepPink;
             this.Bt_TurnOffCamera.StateTracking.Border.Color2 = System.Drawing.Color.Crimson;
             this.Bt_TurnOffCamera.StateTracking.Border.ColorAngle = 45F;
@@ -677,6 +779,7 @@ namespace PCI.VisualLabellingUI
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.Bt_TurnOffCamera.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.Bt_TurnOffCamera.StateTracking.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Bt_TurnOffCamera.StateTracking.Border.Rounding = 8F;
             this.Bt_TurnOffCamera.StateTracking.Border.Width = 1;
             this.Bt_TurnOffCamera.TabIndex = 10;
@@ -701,11 +804,15 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.kryptonTableLayoutPanel7.Size = new System.Drawing.Size(361, 867);
             this.kryptonTableLayoutPanel7.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel7.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel7.TabIndex = 6;
             // 
             // Gb_Instruction
             // 
+            this.Gb_Instruction.CaptionStyle = Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.Gb_Instruction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Gb_Instruction.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.Gb_Instruction.GroupBorderStyle = Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.Gb_Instruction.Location = new System.Drawing.Point(3, 696);
             this.Gb_Instruction.Name = "Gb_Instruction";
             // 
@@ -714,6 +821,7 @@ namespace PCI.VisualLabellingUI
             this.Gb_Instruction.Panel.Controls.Add(this.kryptonTableLayoutPanel10);
             this.Gb_Instruction.Size = new System.Drawing.Size(355, 168);
             this.Gb_Instruction.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.Gb_Instruction.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Gb_Instruction.TabIndex = 6;
             this.Gb_Instruction.Values.Heading = "Instruction :";
             // 
@@ -731,6 +839,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel10.Size = new System.Drawing.Size(351, 140);
             this.kryptonTableLayoutPanel10.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel10.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel10.TabIndex = 0;
             // 
             // Lb_Instruction
@@ -748,7 +857,10 @@ namespace PCI.VisualLabellingUI
             // 
             // Gb_Information
             // 
+            this.Gb_Information.CaptionStyle = Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.Gb_Information.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Gb_Information.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.Gb_Information.GroupBorderStyle = Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.Gb_Information.Location = new System.Drawing.Point(3, 81);
             this.Gb_Information.Name = "Gb_Information";
             // 
@@ -757,6 +869,7 @@ namespace PCI.VisualLabellingUI
             this.Gb_Information.Panel.Controls.Add(this.kryptonTableLayoutPanel9);
             this.Gb_Information.Size = new System.Drawing.Size(355, 609);
             this.Gb_Information.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.Gb_Information.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Gb_Information.TabIndex = 7;
             this.Gb_Information.Values.Heading = "Information :";
             // 
@@ -774,6 +887,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel9.Size = new System.Drawing.Size(351, 581);
             this.kryptonTableLayoutPanel9.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel9.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel9.TabIndex = 0;
             // 
             // Tb_Message
@@ -791,7 +905,10 @@ namespace PCI.VisualLabellingUI
             // 
             // Gb_SN
             // 
+            this.Gb_SN.CaptionStyle = Krypton.Toolkit.LabelStyle.GroupBoxCaption;
             this.Gb_SN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Gb_SN.GroupBackStyle = Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.Gb_SN.GroupBorderStyle = Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.Gb_SN.Location = new System.Drawing.Point(3, 3);
             this.Gb_SN.Name = "Gb_SN";
             // 
@@ -800,6 +917,7 @@ namespace PCI.VisualLabellingUI
             this.Gb_SN.Panel.Controls.Add(this.kryptonTableLayoutPanel8);
             this.Gb_SN.Size = new System.Drawing.Size(355, 72);
             this.Gb_SN.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.Gb_SN.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Gb_SN.TabIndex = 8;
             this.Gb_SN.Values.Heading = "Scan SN here :";
             // 
@@ -817,6 +935,7 @@ namespace PCI.VisualLabellingUI
             this.kryptonTableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.kryptonTableLayoutPanel8.Size = new System.Drawing.Size(351, 44);
             this.kryptonTableLayoutPanel8.StateCommon.Color1 = System.Drawing.Color.White;
+            this.kryptonTableLayoutPanel8.StateCommon.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonTableLayoutPanel8.TabIndex = 0;
             // 
             // Tb_Container
@@ -828,6 +947,7 @@ namespace PCI.VisualLabellingUI
             this.Tb_Container.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.Tb_Container.StateCommon.Border.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.Tb_Container.StateCommon.Border.Rounding = 10F;
             this.Tb_Container.TabIndex = 8;
             this.Tb_Container.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Bt_Container_KeyDown);
@@ -845,6 +965,7 @@ namespace PCI.VisualLabellingUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MES Visual Labelling Camera Picture";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.kryptonTableLayoutPanel1.ResumeLayout(false);
             this.kryptonTableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Pb_Picture)).EndInit();

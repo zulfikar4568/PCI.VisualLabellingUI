@@ -23,7 +23,8 @@ namespace PCI.VisualLabellingUI
         {
             // Component Initialization Default
             InitializeComponent();
-            
+            KeyPreview = true;
+
             // Initialize Form Position
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);
@@ -72,7 +73,20 @@ namespace PCI.VisualLabellingUI
 
             Cb_VideoInput.SelectedIndex = 0;
         }
-
+        private void OnCapture()
+        {
+            if (Vsc_Source.VideoSource == null)
+            {
+                MessageBox.Show(MessageDefinition.CameraNotConnected, "Device Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Lb_Instruction.Text = MessageDefinition.Waiting;
+                Lb_Instruction.ForeColor = Color.White;
+                Lb_Instruction.BackColor = Color.Blue;
+                needSnapshot = true;
+            }
+        }
         private void StartCamera()
         {
             try
@@ -191,16 +205,7 @@ namespace PCI.VisualLabellingUI
 
         private void Bt_Capture_Click(object sender, EventArgs e)
         {
-            if (Vsc_Source.VideoSource == null)
-            {
-                MessageBox.Show(MessageDefinition.CameraNotConnected, "Device Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } else
-            {
-                Lb_Instruction.Text = MessageDefinition.Waiting;
-                Lb_Instruction.ForeColor = Color.White;
-                Lb_Instruction.BackColor = Color.Blue;
-                needSnapshot = true;
-            }
+            OnCapture();
         }
 
         private void Vsc_Source_NewFrame(object sender, ref Bitmap image)
@@ -296,6 +301,14 @@ namespace PCI.VisualLabellingUI
                 CloseCurrentVideoSource();
                 Bt_TurnOffCamera.Enabled = false;
                 Bt_Camera.Enabled = true;
+            }
+        }
+
+        private void Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1 && Bt_Capture.Enabled)
+            {
+                OnCapture();
             }
         }
     } 
