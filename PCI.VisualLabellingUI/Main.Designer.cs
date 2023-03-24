@@ -780,6 +780,10 @@ namespace PCI.VisualLabellingUI
             this.Bt_PassCapture.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.Bt_PassCapture.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.Bt_PassCapture.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_PassCapture.StateDisabled.Back.Color1 = System.Drawing.Color.Silver;
+            this.Bt_PassCapture.StateDisabled.Back.Color2 = System.Drawing.Color.Gray;
+            this.Bt_PassCapture.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.Bt_PassCapture.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
             this.Bt_PassCapture.StateNormal.Back.Color1 = System.Drawing.Color.LimeGreen;
             this.Bt_PassCapture.StateNormal.Back.Color2 = System.Drawing.Color.MediumSeaGreen;
             this.Bt_PassCapture.StateNormal.Back.ColorAngle = 45F;
@@ -821,6 +825,7 @@ namespace PCI.VisualLabellingUI
             this.Bt_PassCapture.StateTracking.Border.Width = 1;
             this.Bt_PassCapture.TabIndex = 12;
             this.Bt_PassCapture.Values.Text = "Pass (F3)";
+            this.Bt_PassCapture.Click += new System.EventHandler(this.Bt_PassCapture_Click);
             // 
             // Bt_RetryCapture
             // 
@@ -918,6 +923,7 @@ namespace PCI.VisualLabellingUI
             this.Bt_RetryCapture.StateTracking.Border.Width = 1;
             this.Bt_RetryCapture.TabIndex = 11;
             this.Bt_RetryCapture.Values.Text = "Retry (F2)";
+            this.Bt_RetryCapture.Click += new System.EventHandler(this.Bt_RetryCapture_Click);
             // 
             // kryptonTableLayoutPanel7
             // 

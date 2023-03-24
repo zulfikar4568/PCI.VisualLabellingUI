@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace PCI.VisualLabellingUI
         private static bool needSnapshot = false;
         private readonly CameraUtil _camera;
         private readonly TransferImage _usecaseTransferImage;
+        private byte[] _currentImage = null;
 
         public Main(CameraUtil camera, TransferImage usecaseTransferImage)
         {
@@ -81,9 +83,6 @@ namespace PCI.VisualLabellingUI
             }
             else
             {
-                Lb_Instruction.Text = MessageDefinition.Waiting;
-                Lb_Instruction.ForeColor = Color.White;
-                Lb_Instruction.BackColor = Color.Blue;
                 needSnapshot = true;
             }
         }
@@ -147,6 +146,16 @@ namespace PCI.VisualLabellingUI
             }
         }
 
+        private void EnabledCapturing()
+        {
+            if (Pb_Picture.Image != null)
+            {
+                Bt_RetryCapture.Enabled = true;
+                Bt_PassCapture.Enabled = true;
+                Bt_Capture.Enabled = false;
+            }
+        }
+
         public void UpdateCaptureSnapshotManifast(Bitmap image)
         {
             try
@@ -155,16 +164,9 @@ namespace PCI.VisualLabellingUI
                 Pb_Picture.Image = image;
                 Pb_Picture.Update();
 
-                bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
-                if (status)
-                {
-                    MessageBox.Show(MessageDefinition.SendImageSuccess, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ResetState();
-                } else
-                {
-                    MessageBox.Show(MessageDefinition.SendImageFailed, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    ResetState();
-                }
+                _currentImage = _camera.ImageToByte(image);
+
+                EnabledCapturing();
             }
             catch (Exception ex) 
             {
@@ -255,6 +257,10 @@ namespace PCI.VisualLabellingUI
             Lb_Instruction.Text = MessageDefinition.MessageBeforeScan;
             Lb_Instruction.ForeColor = Color.White;
             Lb_Instruction.BackColor = Color.Green;
+
+
+            Bt_RetryCapture.Enabled = false;
+            Bt_PassCapture.Enabled = false;
         }
 
         private void Bt_Camera_Click(object sender, EventArgs e)
@@ -309,7 +315,56 @@ namespace PCI.VisualLabellingUI
             if (e.KeyCode == Keys.F1 && Bt_Capture.Enabled)
             {
                 OnCapture();
+            } else if (e.KeyCode == Keys.F3 && Bt_PassCapture.Enabled)
+            {
+                PassCapturing();
+            } else if (e.KeyCode == Keys.F2 && Bt_RetryCapture.Enabled)
+            {
+                RetryCapturing();
             }
+        }
+
+        private void PassCapturing()
+        {
+            using (var ms = new MemoryStream(_currentImage))
+            {
+                Bitmap bmp = new Bitmap(ms);
+                Pb_Picture.Image = bmp;
+                Pb_Picture.Update();
+            }
+
+            bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
+            Lb_Instruction.Text = MessageDefinition.Waiting;
+            Lb_Instruction.ForeColor = Color.White;
+            Lb_Instruction.BackColor = Color.Blue;
+            if (status)
+            {
+                MessageBox.Show(MessageDefinition.SendImageSuccess, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ResetState();
+            }
+            else
+            {
+                MessageBox.Show(MessageDefinition.SendImageFailed, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ResetState();
+            }
+        }
+
+        private void Bt_PassCapture_Click(object sender, EventArgs e)
+        {
+            PassCapturing();
+        }
+
+        private void RetryCapturing()
+        {
+            Pb_Picture.Image = null;
+            Bt_Capture.Enabled = true;
+            Bt_RetryCapture.Enabled = false;
+            Bt_PassCapture.Enabled = false;
+        }
+
+        private void Bt_RetryCapture_Click(object sender, EventArgs e)
+        {
+            RetryCapturing();
         }
     } 
 }
