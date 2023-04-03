@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.3.0"></a>
+## [1.3.0](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.3.0) (2023-4-3)
+
+### Features
+
+* pass retry mode camera ([93159b2](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/93159b2a1de49a0b34de2075163ccf18d1e7455a))
+
+### Bug Fixes
+
+* add event ([3aa6969](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/3aa6969f3a9e74eeb5780d98bc1501917f89fe71))
+* renaming the file ([e80b36c](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/e80b36ccd729f1f6cecfec658d2090a8e8113b98))
+
+### Other
+
+* add button confirm ([63980ae](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/63980ae8420112b7ed73c1c1349b47b287174bf4))
+* Merge branch 'master' into feat/feedback-2 ([7146aa3](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/7146aa3198d7eafad8210efaa5e11d581a76ff03))
+* Merge pull request #2 from zulfikar4568/feat/feedback-2 ([4b4dd3f](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/4b4dd3f016ad03320fd7e43a513c714255d337a0))
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.2.1) (2023-4-3)
 
