@@ -155,7 +155,7 @@ namespace PCI.VisualLabellingUI
                 Pb_Picture.Image = image;
                 Pb_Picture.Update();
 
-                bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
+                bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
                 if (status)
                 {
                     MessageBox.Show(MessageDefinition.SendImageSuccess, "Sending the Image", MessageBoxButtons.OK, MessageBoxIcon.Information);
