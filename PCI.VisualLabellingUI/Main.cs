@@ -333,7 +333,7 @@ namespace PCI.VisualLabellingUI
                 Pb_Picture.Update();
             }
 
-            bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}_{DateTime.Now:yyyyMMddHHmmss}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
+            bool status = _usecaseTransferImage.MainLogic(Pb_Picture, Tb_Container.Text, $"{AppSettings.PrefixDocumentName}{Tb_Container.Text}", AppSettings.DocumentRevision, AppSettings.DocumentDescription);
             Lb_Instruction.Text = MessageDefinition.Waiting;
             Lb_Instruction.ForeColor = Color.White;
             Lb_Instruction.BackColor = Color.Blue;
