@@ -163,7 +163,7 @@ namespace PCI.VisualLabellingUI
                 needSnapshot = false;
                 Pb_Picture.Image = image;
                 Pb_Picture.Update();
-
+                
                 _currentImage = _camera.ImageToByte(image);
 
                 EnabledCapturing();

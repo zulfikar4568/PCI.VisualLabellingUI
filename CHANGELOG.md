@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.2.1) (2023-4-3)
+
+### Bug Fixes
+
+* rename the file ([6ec4b03](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/6ec4b03c9ddb4e4ba0b91b1def533ecdf19e629b))
+
+### Other
+
+* Merge branch 'master' of https://github.com/zulfikar4568/PCI.VisualLabellingUI ([df5996f](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/df5996f82552ea039df48b5d22cfea6dc8f397f5))
+* **release:** 1.2.0 ([144896f](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/144896fecf78df20778bafb342c18b0b103e5280))
+
 <a name="1.2.0"></a>
 ## [1.2.0](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.2.0) (2023-3-23)
 
