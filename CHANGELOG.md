@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.3.1"></a>
+## [1.3.1](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.3.1) (2023-6-12)
+
+### Bug Fixes
+
+* add package releaser ci/cd ([4af27d0](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/4af27d0e91e0b41b85d2c125da46e88081f96b75))
+
 <a name="1.3.0"></a>
 ## [1.3.0](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.3.0) (2023-4-3)
 
