@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="1.4.0"></a>
+## [1.4.0](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.4.0) (2023-6-13)
+
+### Features
+
+* add build version ([99859ef](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/99859ef0e049dca65218fd55964246aa80c16421))
+
+### Other
+
+* **update:** v1.3.1 push to the AssemblyInfo.cs ([468e5d7](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/commit/468e5d7dfa35e8f1cf5137aa54823689843a3ead))
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://www.github.com/zulfikar4568/PCI.VisualLabellingUI/releases/tag/v1.3.1) (2023-6-12)
 
